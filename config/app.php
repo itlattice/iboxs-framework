@@ -11,7 +11,7 @@ return [
     // 是否启用路由
     'with_route'       => true,
     // 默认应用
-    'default_app'      => 'index',
+    'default_app'      => 'home',
     // 默认时区
     'default_timezone' => 'Asia/Shanghai',
 
@@ -29,4 +29,10 @@ return [
     'error_message'    => '页面错误！请稍后再试～',
     // 显示错误信息
     'show_error_msg'   => false,
+	
+	'page_size'    => 20,
+	
+    // 默认跳转页面对应的模板文件【新增】
+    'dispatch_success_tmpl' => app()->getRootPath() . '/public/tpl/dispatch_jump.tpl',
+    'dispatch_error_tmpl'  => app()->getRootPath() . '/public/tpl/dispatch_jump.tpl',
 ];

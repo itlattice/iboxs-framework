@@ -1,0 +1,28 @@
+{
+    "name": "iboxs/iboxs-multi-app",
+    "description": "iboxsphp6 multi app support",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.1.0",
+        "iboxs/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iboxs\\app\\": "src"
+        }
+    },
+    "extra": {
+        "iboxs":{
+            "services":[
+                "iboxs\\app\\Service"
+            ]
+        }
+    },    
+    "minimum-stability": "dev"
+}

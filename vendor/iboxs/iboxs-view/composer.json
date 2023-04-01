@@ -1,0 +1,20 @@
+{
+    "name": "iboxs/iboxs-view",
+    "description": "iboxsphp template driver",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.1.0",
+        "iboxs/iboxs-template": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iboxs\\view\\driver\\": "src"
+        }
+    }  
+}

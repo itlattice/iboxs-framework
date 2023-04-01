@@ -7,18 +7,30 @@ namespace Composer\Autoload;
 class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '466f24dcdebe3d40e3fb5aa8fa2663e8' => __DIR__ . '/..' . '/iboxs/iboxs-helper/src/helper.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '6fc3d3ed57360d2c1a65c299a34bbd8c' => __DIR__ . '/..' . '/iboxs/iboxs-orm/stubs/load_stubs.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '600288efac27732bfd7815313da690f3' => __DIR__ . '/..' . '/iboxs/iboxs-captcha/src/helper.php',
+        'cd5441689b14144e5573bf989ee47b34' => __DIR__ . '/..' . '/qcloud/cos-sdk-v5/src/Common.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'i' => 
         array (
+            'iboxs\\view\\driver\\' => 18,
             'iboxs\\trace\\' => 12,
+            'iboxs\\redis\\' => 12,
+            'iboxs\\payment\\' => 14,
+            'iboxs\\captcha\\' => 14,
+            'iboxs\\basic\\' => 12,
+            'iboxs\\app\\' => 10,
             'iboxs\\' => 6,
         ),
         'a' => 
@@ -32,25 +44,73 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
         ),
+        'Q' => 
+        array (
+            'Qcloud\\Sms\\' => 11,
+            'Qcloud\\Cos\\' => 11,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
+            'PhpAmqpLib\\' => 11,
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+        'L' => 
+        array (
+            'League\\MimeTypeDetection\\' => 25,
+            'League\\Flysystem\\' => 17,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\UriTemplate\\' => 23,
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\Command\\Guzzle\\' => 26,
+            'GuzzleHttp\\Command\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'iboxs\\view\\driver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/iboxs-view/src',
+        ),
         'iboxs\\trace\\' => 
         array (
             0 => __DIR__ . '/..' . '/iboxs/iboxs-trace/src',
         ),
+        'iboxs\\redis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/redis/src',
+        ),
+        'iboxs\\payment\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/payment/src',
+        ),
+        'iboxs\\captcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/iboxs-captcha/src',
+        ),
+        'iboxs\\basic\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/basic/src',
+        ),
+        'iboxs\\app\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/iboxs-multi-app/src',
+        ),
         'iboxs\\' => 
         array (
             0 => __DIR__ . '/..' . '/iboxs/framework/src/iboxs',
-            1 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
-            2 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
+            1 => __DIR__ . '/..' . '/iboxs/iboxs-filesystem/src',
+            2 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
+            3 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
+            4 => __DIR__ . '/..' . '/iboxs/iboxs-template/src',
         ),
         'app\\' => 
         array (
@@ -72,6 +132,14 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
+        'Qcloud\\Sms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qcloudsms/qcloudsms_php/src',
+        ),
+        'Qcloud\\Cos\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qcloud/cos-sdk-v5/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -82,11 +150,56 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PhpAmqpLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'League\\MimeTypeDetection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
+        ),
+        'League\\Flysystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'GuzzleHttp\\UriTemplate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/uri-template/src',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\Command\\Guzzle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle-services/src',
+        ),
+        'GuzzleHttp\\Command\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/command/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
     );
 

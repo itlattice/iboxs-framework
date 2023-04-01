@@ -27,8 +27,8 @@ class StrTest extends TestCase
         $this->assertSame('iboxs_p_h_p_framework', Str::snake('iboxsPHPFramework'));
         $this->assertSame('iboxs_php_framework', Str::snake('iboxsPhpFramework'));
         $this->assertSame('iboxs php framework', Str::snake('iboxsPhpFramework', ' '));
-        $this->assertSame('iboxs_php_framework', Str::snake('iboxs Php Framework'));
-        $this->assertSame('iboxs_php_framework', Str::snake('iboxs    Php      Framework   '));
+        $this->assertSame('iboxs_php_framework', Str::snake('IBoxs Php Framework'));
+        $this->assertSame('iboxs_php_framework', Str::snake('IBoxs    Php      Framework   '));
         // ensure cache keys don't overlap
         $this->assertSame('iboxs__php__framework', Str::snake('iboxsPhpFramework', '__'));
         $this->assertSame('iboxs_php_framework_', Str::snake('iboxsPhpFramework_', '_'));

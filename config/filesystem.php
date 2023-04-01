@@ -1,8 +1,10 @@
 <?php
 
+use iboxs\facade\Env;
+
 return [
     // 默认磁盘
-    'default' => env('filesystem.driver', 'local'),
+    'default' => Env::get('filesystem.driver', 'local'),
     // 磁盘列表
     'disks'   => [
         'local'  => [

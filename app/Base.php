@@ -4,14 +4,16 @@ declare (strict_types = 1);
 namespace app;
 
 use iboxs\App;
+use iboxs\basic\traits\Convert;
 use iboxs\exception\ValidateException;
 use iboxs\Validate;
 
 /**
  * 控制器基础类
  */
-abstract class BaseController
+abstract class Base
 {
+    use Convert;
     /**
      * Request实例
      * @var \iboxs\Request

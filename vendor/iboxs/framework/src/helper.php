@@ -662,3 +662,17 @@ if (!function_exists('root_path')) {
         return app()->getRootPath() . ($path ? $path . DIRECTORY_SEPARATOR : $path);
     }
 }
+
+if (!function_exists('resource_path')) {
+    /**
+     * 获取项目资源目录
+     *
+     * @param string $path
+     * @return string
+     */
+    function resource_path($path = '')
+    {
+        return app()->getResourcePath() . ($path ? $path . DIRECTORY_SEPARATOR : $path);
+    }
+}
+

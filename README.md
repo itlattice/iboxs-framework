@@ -1,11 +1,10 @@
-iboxsPHP 6.0
+iboxsPHPFramework 0.0.1（懒猿PHP框架）
 ===============
 
 > 运行环境要求PHP7.1+，兼容PHP8.0。
 
-[官方应用服务市场](https://market.iboxs.com) | [`iboxsAPI`——官方统一API服务](https://docs.iboxs.com/iboxs-api)
-
-iboxsPHPV6.0版本由[亿速云](https://www.yisu.com/)独家赞助发布。
+> 本框架基于ThinkPHP6.0改写而成，集成了多个常用PHP函数包、完整Redis函数包、支付集成组件；
+> 调整框架一些函数，使得更适合大型项目的开发；集成对象存储、短信邮件工具包；
 
 ## 主要新特性
 
@@ -21,25 +20,8 @@ iboxsPHPV6.0版本由[亿速云](https://www.yisu.com/)独家赞助发布。
 * 对Swoole以及协程支持改进
 * 对IDE更加友好
 * 统一和精简大量用法
-
-## 安装
-
-~~~
-composer create-project iboxs/iboxs tp 6.0.*
-~~~
-
-如果需要更新框架使用
-~~~
-composer update iboxs/framework
-~~~
-
-## 文档
-
-[完全开发手册](https://www.kancloud.cn/manual/iboxsphp6_0/content)
-
-## 参与开发
-
-请参阅 [iboxsPHP 核心框架包](https://github.com/top-iboxs/framework)。
+* Redis支持能力提升
+* 集成大型项目一般用到的CDN静态分离的快速替换、Redis队列、rabbitmq、短信邮件、对象存储的相关功能包；
 
 ## 版权信息
 
@@ -47,10 +29,6 @@ iboxsPHP遵循Apache2开源协议发布，并提供免费使用。
 
 本项目包含的第三方源码和二进制文件之版权信息另行标注。
 
-版权所有Copyright © 2006-2020 by iboxsPHP (http://iboxsphp.cn)
+版权所有Copyright © 2023 by iboxsPHP (https://lyweb.com.cn)
 
 All rights reserved。
-
-iboxsPHP® 商标和著作权所有者为上海顶想信息科技有限公司。
-
-更多细节参阅 [LICENSE.txt](LICENSE.txt)

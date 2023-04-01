@@ -96,6 +96,12 @@ class App extends Container
     protected $runtimePath = '';
 
     /**
+     * 项目资源目录
+     * @var string
+     */
+    protected $resourcePath = '';
+
+    /**
      * 路由定义目录
      * @var string
      */
@@ -171,6 +177,7 @@ class App extends Container
         $this->rootPath    = $rootPath ? rtrim($rootPath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR : $this->getDefaultRootPath();
         $this->appPath     = $this->rootPath . 'app' . DIRECTORY_SEPARATOR;
         $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
+        $this->resourcePath = $this->rootPath . 'resource' . DIRECTORY_SEPARATOR;
 
         if (is_file($this->appPath . 'provider.php')) {
             $this->bind(include $this->appPath . 'provider.php');
@@ -351,6 +358,15 @@ class App extends Container
     public function getRuntimePath(): string
     {
         return $this->runtimePath;
+    }
+
+    /**
+     * 获取应用资源目录
+     * @return string
+     */
+    public function getResourcePath():string
+    {
+        return $this->resourcePath;
     }
 
     /**

@@ -9,9 +9,4 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 use iboxs\facade\Route;
-
-Route::get('iboxs', function () {
-    return 'hello,iboxsPHP6!';
-});
-
 Route::get('hello/:name', 'index/hello');

@@ -1,5 +1,6 @@
 <?php
 namespace until;
+use iboxs\basic\Basic;
 
 class ShortLink{
     /**
@@ -11,15 +12,16 @@ class ShortLink{
     }
 
     const API_URL    = 'https://gz8.co/api/getshort';
+    const APPID      = '';
     const APP_KEY    = '';
 
     public function create($url,$uptime)
     {
-        $str=set_salt(8);
+        $str=Basic::GetRandStr(8);
         $time=time();
-        $sign=md5(md5(''.$str.urlencode($url).$time).self::APP_KEY);
+        $sign=md5(md5(self::APPID.$str.urlencode($url).$time).self::APP_KEY);
         $res=self::post(self::API_URL,[
-            'appid'=>'',
+            'appid'=>self::APPID,
             'sign'=>$sign,
             'str'=>$str,
             'time'=>$time,

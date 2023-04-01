@@ -1,0 +1,26 @@
+<?php
+declare (strict_types = 1);
+
+namespace {%namespace%};
+
+use iboxs\console\Command;
+use iboxs\console\Input;
+use iboxs\console\input\Argument;
+use iboxs\console\input\Option;
+use iboxs\console\Output;
+
+class {%className%} extends Command
+{
+    protected function configure()
+    {
+        // 指令配置
+        $this->setName('{%commandName%}')
+            ->setDescription('the {%commandName%} command');
+    }
+
+    protected function execute(Input $input, Output $output)
+    {
+        // 指令输出
+        $output->writeln('{%commandName%}');
+    }
+}

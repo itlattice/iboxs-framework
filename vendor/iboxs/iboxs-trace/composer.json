@@ -1,0 +1,31 @@
+{
+    "name": "iboxs/iboxs-trace",
+    "description": "iboxsphp debug trace",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.1.0",
+        "iboxs/framework": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iboxs\\trace\\": "src"
+        }
+    },
+    "extra": {
+        "iboxs":{
+            "services":[
+                "iboxs\\trace\\Service"
+            ],
+            "config":{
+                "trace": "src/config.php"
+            }
+        }
+    },    
+    "minimum-stability": "dev"
+}

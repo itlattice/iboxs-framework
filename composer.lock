@@ -209,7 +209,7 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
-            "name": "topiboxs/framework",
+            "name": "iboxs/framework",
             "version": "v6.1.1",
             "source": {
                 "type": "git",
@@ -230,8 +230,8 @@
                 "psr/http-message": "^1.0",
                 "psr/log": "~1.0",
                 "psr/simple-cache": "^1.0",
-                "topiboxs/iboxs-helper": "^3.1.1",
-                "topiboxs/iboxs-orm": "^2.0"
+                "iboxs/iboxs-helper": "^3.1.1",
+                "iboxs/iboxs-orm": "^2.0"
             },
             "require-dev": {
                 "guzzlehttp/psr7": "^2.1.0",
@@ -274,7 +274,7 @@
             "time": "2022-10-26T03:48:53+00:00"
         },
         {
-            "name": "topiboxs/iboxs-helper",
+            "name": "iboxs/iboxs-helper",
             "version": "v3.1.6",
             "source": {
                 "type": "git",
@@ -320,7 +320,7 @@
             "time": "2021-12-15T04:27:55+00:00"
         },
         {
-            "name": "topiboxs/iboxs-orm",
+            "name": "iboxs/iboxs-orm",
             "version": "v2.0.56",
             "source": {
                 "type": "git",
@@ -339,7 +339,7 @@
                 "php": ">=7.1.0",
                 "psr/log": "^1.0|^2.0",
                 "psr/simple-cache": "^1.0|^2.0",
-                "topiboxs/iboxs-helper": "^3.1"
+                "iboxs/iboxs-helper": "^3.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7|^8|^9.5"
@@ -708,7 +708,7 @@
             "time": "2022-10-03T15:15:11+00:00"
         },
         {
-            "name": "topiboxs/iboxs-trace",
+            "name": "iboxs/iboxs-trace",
             "version": "v1.5",
             "source": {
                 "type": "git",
@@ -723,7 +723,7 @@
             },
             "require": {
                 "php": ">=7.1.0",
-                "topiboxs/framework": "^6.0"
+                "iboxs/framework": "^6.0"
             },
             "type": "library",
             "extra": {

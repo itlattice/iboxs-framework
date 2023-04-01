@@ -1,0 +1,14 @@
+<?php
+declare (strict_types = 1);
+
+namespace {%namespace%};
+
+use iboxs\Model;
+
+/**
+ * @mixin \iboxs\Model
+ */
+class {%className%} extends Model
+{
+    //
+}

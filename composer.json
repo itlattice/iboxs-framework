@@ -7,17 +7,13 @@
         "iboxsphp",
         "ORM"
     ],
-    "homepage": "http://iboxsphp.cn/",
+    "homepage": "https://lyweb.com.cn/",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
-        },
-        {
-            "name": "yunwuxin",
-            "email": "448901948@qq.com"
-        }        
+            "name": "itlattice",
+            "email": "zqu1016@qq.com"
+        }
     ],
     "require": {
         "php": ">=7.1.0",

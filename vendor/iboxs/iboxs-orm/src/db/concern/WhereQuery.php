@@ -81,28 +81,6 @@ trait WhereQuery
     }
 
     /**
-     * 指定And查询（Like）
-     * @access public
-     * @param mixed $field     查询字段
-     * @param mixed $condition 查询值
-     * @return $this|BaseQuery
-     */
-    public function whereLike($field,$condition)
-    {
-        if ($field instanceof $this) {
-            $this->parseQueryWhere($field);
-            return $this;
-        } elseif (true === $field || 1 === $field) {
-            $this->options['where']['AND'][] = true;
-            return $this;
-        }
-
-        $param = func_get_args();
-        array_shift($param);
-        return $this->parseWhereExp('AND', $field, "like","%{$condition}%", $param);
-    }
-
-    /**
      * 指定XOR查询条件
      * @access public
      * @param mixed $field     查询字段

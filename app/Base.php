@@ -4,7 +4,7 @@ declare (strict_types = 1);
 namespace app;
 
 use iboxs\App;
-use iboxs\basic\traits\Convert;
+use iboxs\convert\Convert;
 use iboxs\exception\ValidateException;
 use iboxs\Validate;
 

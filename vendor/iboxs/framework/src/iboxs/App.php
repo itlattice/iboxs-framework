@@ -54,6 +54,11 @@ class App extends Container
     protected $envName = '';
 
     /**
+     * 应用名称
+     */
+    protected $appName='';
+
+    /**
      * 应用开始时间
      * @var float
      */
@@ -550,6 +555,7 @@ class App extends Container
                 $this->register($service);
             }
         }
+        $this->appName      = \appName();
     }
 
     /**

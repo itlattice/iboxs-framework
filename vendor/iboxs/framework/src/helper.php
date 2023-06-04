@@ -676,3 +676,22 @@ if (!function_exists('resource_path')) {
     }
 }
 
+if(!function_exists('appName')){
+    /**
+     * 获取应用名称
+     */
+    function appName(){
+        $subDomain=request()->subDomain();
+        $appName='home';
+        $bind = config('app.domain_bind', []);
+        if (!empty($bind)) {
+            // 获取当前子域名
+            if (isset($bind[$subDomain])) {
+                $appName = $bind[$subDomain];
+            } elseif (isset($bind['*'])) {
+                $appName = $bind['*'];
+            }
+        }
+        return $appName;
+    }
+}

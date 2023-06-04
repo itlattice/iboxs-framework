@@ -2128,6 +2128,13 @@ class Request implements ArrayAccess
     }
 
     /**
+     * 请求的应用名称
+     */
+    public function appName(){
+        return appName();
+    }
+
+    /**
      * 设置中间传递数据
      * @access public
      * @param  string    $name  参数名

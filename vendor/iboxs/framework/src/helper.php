@@ -15,6 +15,7 @@ declare (strict_types = 1);
 //-------------------------
 
 use iboxs\App;
+use iboxs\basic\Basic;
 use iboxs\Container;
 use iboxs\exception\HttpException;
 use iboxs\exception\HttpResponseException;
@@ -28,6 +29,7 @@ use iboxs\facade\Log;
 use iboxs\facade\Request;
 use iboxs\facade\Route;
 use iboxs\facade\Session;
+use iboxs\redis\Redis;
 use iboxs\Response;
 use iboxs\response\File;
 use iboxs\response\Json;
@@ -673,6 +675,17 @@ if (!function_exists('resource_path')) {
     function resource_path($path = '')
     {
         return app()->getResourcePath() . ($path ? $path . DIRECTORY_SEPARATOR : $path);
+    }
+}
+
+if(!function_exists('token')){
+    /**
+     * 获取token
+     */
+    function token(){
+        $token=md5(Basic::GetRandStr(8).request()->ip().microtime(true));
+        Redis::basic()->set('token:'.$token,1,1800);
+        return $token;
     }
 }
 

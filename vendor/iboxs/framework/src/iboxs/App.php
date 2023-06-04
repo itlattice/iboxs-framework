@@ -54,11 +54,6 @@ class App extends Container
     protected $envName = '';
 
     /**
-     * 应用名称
-     */
-    protected $appName='';
-
-    /**
      * 应用开始时间
      * @var float
      */
@@ -183,7 +178,6 @@ class App extends Container
         $this->appPath     = $this->rootPath . 'app' . DIRECTORY_SEPARATOR;
         $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
         $this->resourcePath = $this->rootPath . 'resource' . DIRECTORY_SEPARATOR;
-        $this->appName      = appName();
 
         if (is_file($this->appPath . 'provider.php')) {
             $this->bind(include $this->appPath . 'provider.php');

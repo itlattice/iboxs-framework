@@ -29,7 +29,8 @@
         "phpmailer/phpmailer": "^6.7",
         "iboxs/redis": "^1.0",
         "iboxs/basic": "^1.1",
-        "iboxs/payment": "^1.2"
+        "iboxs/payment": "^1.2",
+        "nesbot/carbon": "^2.68"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",

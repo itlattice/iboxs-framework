@@ -3,7 +3,7 @@
         'name' => 'iboxs/iboxs',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'e0337ba55ffbb64f1f70042ca0e61e73f7d08606',
+        'reference' => '29f4df2b6b9a4fba56e87cd50d7242726179875a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -94,7 +94,7 @@
         'iboxs/iboxs' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'e0337ba55ffbb64f1f70042ca0e61e73f7d08606',
+            'reference' => '29f4df2b6b9a4fba56e87cd50d7242726179875a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

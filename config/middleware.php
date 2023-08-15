@@ -5,4 +5,24 @@ return [
     'alias'    => [],
     // 优先级设置，此数组中的中间件会按照数组中的顺序优先执行
     'priority' => [],
+
+    'extend'=>[
+        'app'=>[
+
+        ],
+        'path'=>[
+
+        ],
+        'controller'=>[
+
+        ],
+        'action'=>[
+
+        ],
+        'statusCode'=>'403',
+        'noTokenMsg'=>[
+            'code'=>-1,
+            'msg'=>'非法请求'
+        ]
+    ]
 ];

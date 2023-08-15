@@ -357,6 +357,16 @@ trait Attribute
         }
     }
 
+    public function htmlAttrs($data){
+        foreach ($data as $key => $value) {
+            if(is_string($value)||is_array($value)){
+                $value=str_replace('<','&lt;',$value);
+                $data[$key]=str_replace('>','&gt;',$value);
+            }
+        }
+        return $data;
+    }
+
     /**
      * 通过修改器 设置数据对象值
      * @access public
@@ -459,7 +469,8 @@ trait Attribute
                     $value = $value->__toString();
                 }
         }
-
+        $value=str_replace('<','&lt;',$value);
+        $value=str_replace('>','&gt;',$value);
         return $value;
     }
 

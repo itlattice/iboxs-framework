@@ -1606,7 +1606,13 @@ class Request implements ArrayAccess
         if (!empty($this->realIP)) {
             return $this->realIP;
         }
-
+        $headerIP=request()->header('X-Forwarded-For');
+        if($headerIP!=null){
+            if ($this->isValidIP($headerIP)) {
+                $this->realIP=$headerIP;
+                return $headerIP;
+            }
+        }
         $this->realIP = $this->server('REMOTE_ADDR', '');
 
         // 如果指定了前端代理服务器IP以及其会发送的IP头
@@ -2119,6 +2125,13 @@ class Request implements ArrayAccess
     {
         $this->route = $route;
         return $this;
+    }
+
+    /**
+     * 请求的应用名称
+     */
+    public function appName(){
+        return appName();
     }
 
     /**

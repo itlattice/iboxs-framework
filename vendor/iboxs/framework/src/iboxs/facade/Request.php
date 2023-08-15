@@ -112,6 +112,7 @@ use iboxs\route\Rule;
  * @method static \iboxs\Request withInput(string $input) 设置php://input数据
  * @method static \iboxs\Request withFiles(array $files) 设置文件上传数据
  * @method static \iboxs\Request withRoute(array $route) 设置ROUTE变量
+ * @method static string appName() 获取应用名称
  * @method static mixed __set(string $name, mixed $value) 设置中间传递数据
  * @method static mixed __get(string $name) 获取中间传递数据的值
  * @method static boolean __isset(string $name) 检测中间传递数据的值

@@ -22,36 +22,61 @@ trait Convert
         return $array;
     }
 
-    protected function fetch($template='',$vars=[],$code=200,$filter=null){
-        return view($template,$vars,$code,$filter);
+    /**
+     * 数组去重
+     * @param array $data
+     * @return array
+     */
+    public function ArrayDuplicate(Array $data){
+        $result=[];
+        foreach($data as $d){
+            if(in_array($d,$result)){
+                continue;
+            }
+            $result[]=$d;
+        }
+        return $result;
     }
 
-    protected function assign($key,$value=null){
-        return View::assign($key,$value);
+    /**
+     * 找出数组中最大值
+     * @param $data
+     * @return mixed
+     */
+    public function maxNum($data){
+        $max=$data[0];
+        foreach($data as $num){
+            if($max<$num){
+                $max=$num;
+            }
+        }
+        return $max;
     }
 
-    public function json($code=0,$msg='操作成功',$data=[],$other=[],$state=200){
-        $result=[
-            'code'=>$code
-        ];
-        $result['msg']=$msg;
-        $result['data']=$data;
-        foreach($other as $k=>$v){
-            $result[$k]=$v;
+    /**
+     * 数组全部值求和
+     * @param $arr
+     * @return int|mixed
+     */
+    public function getAnd($arr){
+        $result=0;
+        foreach($arr as $num){
+            $result+=$num;
         }
-        return json($result,$state);
+        return $result;
     }
-    
-    public function layJson($data,$map=null){
-        $count=$data->count();
-        $limit=request()->post('limit',25);
-        $page=request()->post('page',1);
-        $page=intval($page);
-        $limit=intval($limit);
-        $list=$data->page($page,$limit)->select();
-        if($map!=null){
-            $list=$list->map($map);
+
+    /**
+     * 字典转普通数组
+     * @param $arr
+     * @param $key
+     * @return array
+     */
+    public function getValue($arr,$key){
+        $result=[];
+        foreach($arr as $num){
+            $result[]=$num[$key];
         }
-        return $this->json(0,'获取成功',$list,['count'=>$count]);
+        return $result;
     }
 }

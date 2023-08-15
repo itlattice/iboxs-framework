@@ -40,6 +40,13 @@ trait WhereQuery
         array_shift($param);
         return $this->parseWhereExp('AND', $field, $op, $condition, $param);
     }
+    
+    /**
+     * 查询全局创建
+     */
+    public function query(){
+        return $this;
+    }
 
     /**
      * 解析Query对象查询条件

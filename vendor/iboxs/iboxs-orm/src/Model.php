@@ -601,7 +601,7 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
 
         // 获取有更新的数据
         $data = $this->getChangedData();
-
+        $data=$this->htmlAttrs($data);
         if (empty($data)) {
             // 关联更新
             if (!empty($this->relationWrite)) {
@@ -674,7 +674,7 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
 
         $this->checkData();
         $data = $this->data;
-
+        $data=$this->htmlAttrs($data);
         // 时间戳自动写入
         if ($this->autoWriteTimestamp) {
             if ($this->createTime && !isset($data[$this->createTime])) {
@@ -846,6 +846,7 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
             $model->setSuffix($suffix);
         }
 
+        $data=$this->htmlAttrs($data);
         $model->replace($replace)->save($data);
 
         return $model;
@@ -875,7 +876,7 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
         if (!empty($suffix)) {
             $model->setSuffix($suffix);
         }
-
+        $data=$this->htmlAttrs($data);
         $model->exists(true)->save($data);
 
         return $model;
@@ -932,6 +933,8 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
      */
     public function __set(string $name, $value): void
     {
+        $value=str_replace('<','&lt;',$value);
+        $value=str_replace('>','&gt;',$value);
         $this->setAttr($name, $value);
     }
 

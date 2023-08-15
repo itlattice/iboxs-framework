@@ -118,6 +118,16 @@ abstract class BaseQuery
         }
     }
 
+    public function htmlAttrs($data){
+        foreach ($data as $key => $value) {
+            if(is_string($value)||is_array($value)){
+                $value=str_replace('<','&lt;',$value);
+                $data[$key]=str_replace('>','&gt;',$value);
+            }
+        }
+        return $data;
+    }
+
     /**
      * 创建一个新的查询对象
      * @access public
@@ -964,6 +974,7 @@ abstract class BaseQuery
      */
     public function save(array $data = [], bool $forceInsert = false)
     {
+        $data=$this->htmlAttrs($data);
         if ($forceInsert) {
             return $this->insert($data);
         }
@@ -989,6 +1000,7 @@ abstract class BaseQuery
     public function insert(array $data = [], bool $getLastInsID = false)
     {
         if (!empty($data)) {
+            $data=$this->htmlAttrs($data);
             $this->options['data'] = $data;
         }
 
@@ -1003,6 +1015,7 @@ abstract class BaseQuery
      */
     public function insertGetId(array $data)
     {
+        $data=$this->htmlAttrs($data);
         return $this->insert($data, true);
     }
 
@@ -1022,7 +1035,10 @@ abstract class BaseQuery
         if (empty($limit) && !empty($this->options['limit']) && is_numeric($this->options['limit'])) {
             $limit = (int) $this->options['limit'];
         }
-
+        $tmpData=[];
+        foreach($dataSet as $val){
+            $tmpData[]=$this->htmlAttrs($val);
+        }
         return $this->connection->insertAll($this, $dataSet, $limit);
     }
 
@@ -1048,6 +1064,7 @@ abstract class BaseQuery
     public function update(array $data = []): int
     {
         if (!empty($data)) {
+            $data=$this->htmlAttrs($data);
             $this->options['data'] = array_merge($this->options['data'] ?? [], $data);
         }
 

@@ -1,0 +1,21 @@
+{
+    "name": "iboxs/carbon",
+    "description": "时间操作器",
+    "type": "1",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "zqu",
+            "email": "zqu1016@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iboxs\\carbon\\": "src/"
+        }
+    }
+}

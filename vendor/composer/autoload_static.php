@@ -16,7 +16,6 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '600288efac27732bfd7815313da690f3' => __DIR__ . '/..' . '/iboxs/iboxs-captcha/src/helper.php',
         'cd5441689b14144e5573bf989ee47b34' => __DIR__ . '/..' . '/qcloud/cos-sdk-v5/src/Common.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
@@ -29,6 +28,7 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
             'iboxs\\trace\\' => 12,
             'iboxs\\redis\\' => 12,
             'iboxs\\payment\\' => 14,
+            'iboxs\\carbon\\' => 13,
             'iboxs\\captcha\\' => 14,
             'iboxs\\basic\\' => 12,
             'iboxs\\app\\' => 10,
@@ -43,9 +43,7 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\VarDumper\\' => 28,
-            'Symfony\\Component\\Translation\\' => 30,
         ),
         'Q' => 
         array (
@@ -76,10 +74,6 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
             'GuzzleHttp\\Command\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
-        'C' => 
-        array (
-            'Carbon\\' => 7,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -98,6 +92,10 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         'iboxs\\payment\\' => 
         array (
             0 => __DIR__ . '/..' . '/iboxs/payment/src',
+        ),
+        'iboxs\\carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/iboxs/carbon/src',
         ),
         'iboxs\\captcha\\' => 
         array (
@@ -135,17 +133,9 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Contracts\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation-contracts',
-        ),
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
-        ),
-        'Symfony\\Component\\Translation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/translation',
         ),
         'Qcloud\\Sms\\' => 
         array (
@@ -215,10 +205,6 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-        ),
-        'Carbon\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
     );
 

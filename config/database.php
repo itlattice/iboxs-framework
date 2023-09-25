@@ -8,6 +8,7 @@ return [
     // true为自动识别类型 false关闭
     // 字符串则明确指定时间字段类型 支持 int timestamp datetime date
     'auto_timestamp'  => true,
+    
     // 时间字段取出后的默认时间格式
     'datetime_format' => 'Y-m-d H:i:s',
     // 数据库连接配置信息
@@ -24,7 +25,7 @@ return [
             // 密码
             'password'           =>  env('database.password'),
             // 端口
-            'hostport'           =>  '3306',
+            'hostport'           =>  env('database.hostport'),
             // 数据库表前缀
             'prefix'             =>  '',
             // 数据库连接参数

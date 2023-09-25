@@ -17,12 +17,12 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "iboxs/framework": "^6.0.0",
-        "iboxs/iboxs-orm": "^2.0",
-        "iboxs/iboxs-filesystem": "^2.0",
+        "iboxs/framework": "^1.0.0",
+        "iboxs/iboxs-orm": "^1.0",
+        "iboxs/iboxs-filesystem": "^1.0",
         "iboxs/iboxs-multi-app": "^1.0",
         "iboxs/iboxs-view": "^1.0",
-        "iboxs/iboxs-captcha": "^3.0",
+        "iboxs/iboxs-captcha": "^1.0",
         "qcloudsms/qcloudsms_php": "^0.1.4",
         "qcloud/cos-sdk-v5": "^2.6",
         "php-amqplib/php-amqplib": "^2.8",
@@ -30,7 +30,9 @@
         "iboxs/redis": "^1.0",
         "iboxs/basic": "^1.1",
         "iboxs/payment": "^1.2",
-        "iboxs/carbon": "^1.0"
+        "iboxs/carbon": "^1.0",
+        "iboxs/iboxs-swoole": "^1.0",
+        "iboxs/wechat": "2.0.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",

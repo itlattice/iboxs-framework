@@ -9,11 +9,7 @@ class Redis extends Base
 {
     public static function basic(): Basic
     {
-        if(function_exists('config')){
-            $config=config('redis');
-        } else{
-            $config=(new self())->config;
-        }
+        $config=self::getConfig();
         $client=new Client($config);
         return $client->basic();
     }
@@ -23,11 +19,7 @@ class Redis extends Base
      */
     public static function sysmatic()
     {
-        if(function_exists('config')){
-            $config=config('redis');
-        } else{
-            $config=(new self())->config;
-        }
+        $config=self::getConfig();
         $client=new Client($config);
         return $client->sysmatic();
     }
@@ -37,11 +29,7 @@ class Redis extends Base
      */
     public static function list(): ListHandle
     {
-        if(function_exists('config')){
-            $config=config('redis');
-        } else{
-            $config=(new self())->config;
-        }
+        $config=self::getConfig();
         $client=new Client($config);
         return $client->list();
     }
@@ -51,11 +39,7 @@ class Redis extends Base
      */
     public static function Set(): DatabaseSet
     {
-        if(function_exists('config')){
-            $config=config('redis');
-        } else{
-            $config=(new self())->config;
-        }
+        $config=self::getConfig();
         $client=new Client($config);
         return $client->Set();
     }
@@ -65,11 +49,7 @@ class Redis extends Base
      */
     public static function Zset(): DatabaseZset
     {
-        if(function_exists('config')){
-            $config=config('redis');
-        } else{
-            $config=(new self())->config;
-        }
+        $config=self::getConfig();
         $client=new Client($config);
         return $client->Zset();
     }
@@ -79,12 +59,38 @@ class Redis extends Base
      */
     public static function hash(): Hash
     {
+        $config=self::getConfig();
+        $client=new Client($config);
+        return $client->hash();
+    }
+
+    /**
+     * 快速获取键值
+     * @param $key
+     * @param $default
+     */
+    public static function get($key,$default=null)
+    {
+        return self::basic()->get($key,$default);
+    }
+
+    /**
+     * 快速写入键值
+     * @param $key
+     * @param $value
+     * @param $extire
+     */
+    public static function write($key,$value,$time_out=0)
+    {
+        return self::basic()->set($key,$value,$time_out);
+    }
+
+    private static function getConfig(){
         if(function_exists('config')){
             $config=config('redis');
         } else{
             $config=(new self())->config;
         }
-        $client=new Client($config);
-        return $client->hash();
+        return $config;
     }
 }

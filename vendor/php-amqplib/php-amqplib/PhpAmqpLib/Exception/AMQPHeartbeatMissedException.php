@@ -1,6 +1,7 @@
 <?php
+
 namespace PhpAmqpLib\Exception;
 
-class AMQPHeartbeatMissedException extends AMQPRuntimeException
+class AMQPHeartbeatMissedException extends AMQPConnectionClosedException
 {
 }

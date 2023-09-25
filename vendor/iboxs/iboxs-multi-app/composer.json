@@ -10,7 +10,7 @@
     ],
     "require": {
     	"php": ">=7.1.0",
-        "iboxs/framework": "^6.0"
+        "iboxs/framework": "^1.0"
     },
     "autoload": {
         "psr-4": {

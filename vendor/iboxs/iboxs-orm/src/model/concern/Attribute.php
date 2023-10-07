@@ -360,8 +360,8 @@ trait Attribute
     public function htmlAttrs($data){
         foreach ($data as $key => $value) {
             if(is_string($value)||is_array($value)){
-                $value=str_replace('<','&lt;',$value);
-                $data[$key]=str_replace('>','&gt;',$value);
+                $value=str_replace('<script','&lt;script',$value);
+                $data[$key]=str_replace('script>','script&gt;',$value);
             }
         }
         return $data;

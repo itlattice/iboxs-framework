@@ -244,6 +244,11 @@ class Query extends BaseQuery
         return $this;
     }
 
+    public function keywordsWhere($words){
+        $this->model->keywordsWhere($this,$words);
+        return $this;
+    }
+
     /**
      * 设置DUPLICATE
      * @access public

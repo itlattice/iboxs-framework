@@ -1,4 +1,4 @@
-iboxsPHPFramework 0.0.1（懒猿PHP框架）
+iboxsPHPFramework 0.0.2（懒猿PHP框架）
 ===============
 
 > 运行环境要求PHP7.1+，兼容PHP8.0。

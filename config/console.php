@@ -7,5 +7,7 @@ use app\command\Test;
 
 return [
     // 指令定义
-    'commands' => [],
+    'commands' => [
+        'test'=>Test::class,
+    ],
 ];

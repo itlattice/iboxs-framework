@@ -4,8 +4,11 @@ declare (strict_types = 1);
 namespace app;
 
 use iboxs\App;
+use iboxs\convert\ControllerAction;
 use iboxs\convert\Convert;
 use iboxs\exception\ValidateException;
+use iboxs\PostData;
+use iboxs\PostHeader;
 use iboxs\Validate;
 
 /**
@@ -13,7 +16,7 @@ use iboxs\Validate;
  */
 abstract class Base
 {
-    use Convert;
+    use Convert,ControllerAction;
     /**
      * Request实例
      * @var \iboxs\Request
@@ -33,6 +36,16 @@ abstract class Base
     protected $batchValidate = false;
 
     /**
+     * @var \iboxs\PostData 请求数据
+     */
+    protected $postdata;
+
+    /**
+     * @var \iboxs\PostHeader 请求头信息
+     */
+    protected $postheader;
+
+    /**
      * 控制器中间件
      * @var array
      */
@@ -46,8 +59,9 @@ abstract class Base
     public function __construct(App $app)
     {
         $this->app     = $app;
-        $this->request = $this->app->request;
-
+        $this->request = request();
+        $this->postdata=new PostData();
+        $this->postheader=new PostHeader();
         // 控制器初始化
         $this->initialize();
     }

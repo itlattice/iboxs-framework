@@ -34,10 +34,13 @@ if (!function_exists('dump')) {
 if (!function_exists('dd')) {
     function dd(...$vars)
     {
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Allow-Headers:*');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS, PATCH, PUT, DELETE');
         foreach ($vars as $v) {
             VarDumper::dump($v);
         }
-
         exit(1);
     }
 }

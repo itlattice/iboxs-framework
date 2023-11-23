@@ -166,4 +166,27 @@ trait Http
             return 'unknow';
         }
     }
+
+    public function sendGetHeader($url,$headers){
+        $ch = curl_init();
+        # 判断是否是https
+        if (stripos($url, "https://") !== false) {
+            # 禁用后cURL将终止从服务端进行验证
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            # 	使用的SSL版本(2 或 3)
+            curl_setopt($ch, CURLOPT_SSLVERSION, 1);
+        }
+        # 设置请求地址
+        curl_setopt($ch, CURLOPT_URL, $url);
+        # 	在启用CURLOPT_RETURNTRANSFER的时候，返回原生的（Raw）输出
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            
+        # 执行这个请求
+        $output = curl_exec($ch);
+        # 关闭这个请求
+        curl_close($ch);
+        return $output;
+    }
 }

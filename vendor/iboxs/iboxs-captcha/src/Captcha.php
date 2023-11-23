@@ -13,6 +13,7 @@ namespace iboxs\captcha;
 
 use Exception;
 use iboxs\Config;
+use iboxs\redis\Redis;
 use iboxs\Response;
 use iboxs\Session;
 
@@ -167,12 +168,13 @@ class Captcha
      * @param bool        $api
      * @return Response
      */
-    public function create(string $config = null, bool $api = false): Response
+    public function create(string $config = null, bool $api = false,&$key=''): Response
     {
         $this->configure($config);
 
         $generator = $this->generate();
-
+        Redis::set('captchacheck:'.$generator['key'], $generator['value'],600);
+        $key=$generator['key'];
         // 图片宽(px)
         $this->imageW || $this->imageW = $this->length * $this->fontSize * 1.5 + $this->length * $this->fontSize / 2;
         // 图片高(px)
@@ -236,7 +238,6 @@ class Captcha
         imagepng($this->im);
         $content = ob_get_clean();
         imagedestroy($this->im);
-
         return response($content, 200, ['Content-Length' => strlen($content)])->contentType('image/png');
     }
 

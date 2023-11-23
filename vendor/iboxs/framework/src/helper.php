@@ -72,6 +72,16 @@ if (!function_exists('app')) {
     }
 }
 
+if(!function_exists('isDebug')){
+    /**
+     * 检查是否处于调试模式
+     * @return boolean
+     */
+    function isDebug(){
+        return env('app_debug',false);
+    }
+}
+
 if (!function_exists('bind')) {
     /**
      * 绑定一个类到容器

@@ -199,6 +199,10 @@ trait WhereQuery
         return $this->parseWhereExp($logic, $field, 'LIKE', $condition, [], true);
     }
 
+    public function whereKwLike(string $field, $value){
+        return $this->whereLike($field,"%{$value}%");
+    }
+
     /**
      * 指定NotLike查询条件
      * @access public

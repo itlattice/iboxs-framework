@@ -6,5 +6,7 @@ return [
     // 多语言加载
     // \iboxs\middleware\LoadLangPack::class,
     // Session初始化
-     \iboxs\middleware\SessionInit::class
+     \iboxs\middleware\SessionInit::class,
+     // 跨站
+     \iboxs\middleware\AllowCrossDomain::class,
 ];

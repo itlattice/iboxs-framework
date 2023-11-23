@@ -415,6 +415,10 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
         return $this->where($field, 'like', $value);
     }
 
+    public function whereKwLike(string $field, $value){
+        return $this->whereLike($field,"%{$value}%");
+    }
+
     /**
      * NOT LIKE过滤
      * @access public

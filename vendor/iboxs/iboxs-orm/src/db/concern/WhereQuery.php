@@ -40,12 +40,32 @@ trait WhereQuery
         array_shift($param);
         return $this->parseWhereExp('AND', $field, $op, $condition, $param);
     }
-    
+
     /**
      * 查询全局创建
      */
     public function query(){
         return $this;
+    }
+
+    public function whereOrLike($field,$arr){
+        $query=$this->where(function($query) use($field,$arr){
+            $query->where($field,'like',"%".$arr[0]."%");
+            for($i=1;$i<count($arr);$i++){
+                $query->whereOr($field,'like',"%".$arr[$i]."%");
+            }
+        });
+        return $query;
+    }
+
+    public function whereAndLike($field,$arr){
+        $query=$this->where(function($query) use($field,$arr){
+            $query->where($field,'like',"%".$arr[0]."%");
+            for($i=1;$i<count($arr);$i++){
+                $query->where($field,'like',"%".$arr[$i]."%");
+            }
+        });
+        return $query;
     }
 
     /**
@@ -199,7 +219,7 @@ trait WhereQuery
         return $this->parseWhereExp($logic, $field, 'LIKE', $condition, [], true);
     }
 
-    public function whereKwLike(string $field, $value){
+    public function whereMoreLike(string $field, $value){
         return $this->whereLike($field,"%{$value}%");
     }
 

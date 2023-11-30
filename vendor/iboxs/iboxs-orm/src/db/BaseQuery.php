@@ -121,7 +121,7 @@ abstract class BaseQuery
     public function htmlAttrs($data){
         foreach ($data as $key => $value) {
             if(is_string($value)||is_array($value)){
-                $value=str_replace('<script','&lt;script',$value);
+                $value=str_replace('<script','&lt;script',''.$value);
                 $data[$key]=str_replace('script>','script&gt;',$value);
             }
         }
@@ -274,7 +274,6 @@ abstract class BaseQuery
 
         $array[$field] = $result;
         $this->result($array);
-
         return $array[$field];
     }
 

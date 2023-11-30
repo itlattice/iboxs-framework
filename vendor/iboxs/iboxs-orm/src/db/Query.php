@@ -208,6 +208,27 @@ class Query extends BaseQuery
         return $this;
     }
 
+    public function keywordsWhere($words){
+        $this->model->keywordsWhere($this,$words);
+        return $this;
+    }
+
+    
+    public function keywordsWhereArr($words){
+        $this->model->keywordsWhere($this,$words[0]);
+        unset($words[0]);
+        if(count($words)<1){
+            return $this;
+        }
+        foreach ($words as $word) {
+            $this->whereOr(function($query) use ($word){
+                $query->keywordsWhere($word);
+                return $query;
+            });
+        }
+        return $this;
+    }
+
     /**
      * 查询注释
      * @access public
@@ -241,11 +262,6 @@ class Query extends BaseQuery
     public function partition($partition)
     {
         $this->options['partition'] = $partition;
-        return $this;
-    }
-
-    public function keywordsWhere($words){
-        $this->model->keywordsWhere($this,$words);
         return $this;
     }
 

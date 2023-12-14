@@ -223,6 +223,11 @@ trait WhereQuery
         return $this->whereLike($field,"%{$value}%");
     }
 
+    public function whereMatch($column,$value){
+        $value=str_replace('\'','\\\'',$value);
+        return $this->whereRaw("MATCH(`{$column}`) AGAINST('{$value}' IN BOOLEAN MODE)");
+    }
+
     /**
      * 指定NotLike查询条件
      * @access public

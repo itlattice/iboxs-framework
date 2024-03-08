@@ -33,6 +33,12 @@ if (!function_exists('throw_if')) {
     }
 }
 
+if(!function_exists('isDebug')){
+    function isDebug(){
+        return env('app_debug',false);
+    }
+}
+
 if (!function_exists('throw_unless')) {
     /**
      * 按条件抛异常

@@ -189,4 +189,17 @@ trait Http
         curl_close($ch);
         return $output;
     }
+
+    public function GetPage($url){
+        $context = stream_context_create(array(
+            'http' => array(
+                'method' => 'GET',
+                'header' => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\r\n".
+                            "X-Requested-With:XMLHttpRequest\r\n"
+            )
+        ));
+        // 发送GET请求
+        $response = file_get_contents($url, false, $context);
+        return $response;
+    }
 }

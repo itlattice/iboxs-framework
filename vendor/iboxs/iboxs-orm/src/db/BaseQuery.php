@@ -294,6 +294,16 @@ abstract class BaseQuery
 
         return $result;
     }
+	
+	
+    public function columnFun($column){
+        $that=$this;
+        $fun=(function($query) use($that,$column){
+            $query->table($that->getTable())->options($that->getOptions())->field($column);
+        });
+        return $fun;
+    }
+
 
     /**
      * 查询SQL组装 union

@@ -103,7 +103,7 @@ class sysMatic extends BaseOperation
      * @return \Redis
      */
     public function pipeline($int=\Redis::PIPELINE){
-        return $this->handler->pipeline($int);
+        return $this->handler->multi($int);
     }
 
     /**

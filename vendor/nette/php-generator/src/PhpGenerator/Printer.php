@@ -18,8 +18,6 @@ use Nette\Utils\Strings;
  */
 class Printer
 {
-	use Nette\SmartObject;
-
 	public int $wrapLength = 120;
 	public string $indentation = "\t";
 	public int $linesBetweenProperties = 0;
@@ -28,6 +26,7 @@ class Printer
 	public string $returnTypeColon = ': ';
 	public bool $bracesOnNextLine = true;
 	public bool $singleParameterOnOneLine = false;
+	public bool $omitEmptyNamespaces = true;
 	protected ?PhpNamespace $namespace = null;
 	protected ?Dumper $dumper;
 	private bool $resolveTypes = true;
@@ -49,7 +48,7 @@ class Printer
 		$params = $this->printParameters($function, strlen($line) + strlen($returnType) + 2); // 2 = parentheses
 		$body = Helpers::simplifyTaggedNames($function->getBody(), $this->namespace);
 		$body = ltrim(rtrim(Strings::normalize($body)) . "\n");
-		$braceOnNextLine = $this->bracesOnNextLine && (!str_contains($params, "\n") || $returnType);
+		$braceOnNextLine = $this->isBraceOnNextLine(str_contains($params, "\n"), (bool) $returnType);
 
 		return $this->printDocComment($function)
 			. $this->printAttributes($function->getAttributes())
@@ -120,7 +119,7 @@ class Printer
 		$params = $this->printParameters($method, strlen($line) + strlen($returnType) + strlen($this->indentation) + 2);
 		$body = Helpers::simplifyTaggedNames($method->getBody(), $this->namespace);
 		$body = ltrim(rtrim(Strings::normalize($body)) . "\n");
-		$braceOnNextLine = $this->bracesOnNextLine && (!str_contains($params, "\n") || $returnType);
+		$braceOnNextLine = $this->isBraceOnNextLine(str_contains($params, "\n"), (bool) $returnType);
 
 		return $this->printDocComment($method)
 			. $this->printAttributes($method->getAttributes())
@@ -235,7 +234,7 @@ class Printer
 		}
 
 		$line[] = match (true) {
-			$class instanceof ClassType => $class->getName() ? $class->getType() . ' ' . $class->getName() : null,
+			$class instanceof ClassType => $class->getName() ? 'class ' . $class->getName() : null,
 			$class instanceof InterfaceType => 'interface ' . $class->getName(),
 			$class instanceof TraitType => 'trait ' . $class->getName(),
 			$class instanceof EnumType => 'enum ' . $class->getName() . ($enumType ? $this->returnTypeColon . $enumType : ''),
@@ -297,7 +296,9 @@ class Printer
 	{
 		$namespaces = [];
 		foreach ($file->getNamespaces() as $namespace) {
-			$namespaces[] = $this->printNamespace($namespace);
+			if (!$this->omitEmptyNamespaces || $namespace->getClasses() || $namespace->getFunctions()) {
+				$namespaces[] = $this->printNamespace($namespace);
+			}
 		}
 
 		return "<?php\n"
@@ -335,13 +336,13 @@ class Printer
 		}
 
 		if (!$special || ($this->singleParameterOnOneLine && count($function->getParameters()) === 1)) {
-			$line = $this->formatParameters($function, false);
+			$line = $this->formatParameters($function, multiline: false);
 			if (!str_contains($line, "\n") && strlen($line) + $column <= $this->wrapLength) {
 				return $line;
 			}
 		}
 
-		return $this->formatParameters($function, true);
+		return $this->formatParameters($function, multiline: true);
 	}
 
 
@@ -424,7 +425,7 @@ class Printer
 		foreach ($attrs as $attr) {
 			$args = $this->dumper->format('...?:', $attr->getArguments());
 			$args = Helpers::simplifyTaggedNames($args, $this->namespace);
-			$items[] = $this->printType($attr->getName(), nullable: false) . ($args ? "($args)" : '');
+			$items[] = $this->printType($attr->getName(), nullable: false) . ($args === '' ? '' : "($args)");
 			$inline = $inline && !str_contains($args, "\n");
 		}
 
@@ -464,5 +465,11 @@ class Printer
 		return $this->linesBetweenProperties
 			? implode(str_repeat("\n", $this->linesBetweenProperties), $props)
 			: preg_replace('#^(\w.*\n)\n(?=\w.*;)#m', '$1', implode("\n", $props));
+	}
+
+
+	protected function isBraceOnNextLine(bool $multiLine, bool $hasReturnType): bool
+	{
+		return $this->bracesOnNextLine && (!$multiLine || $hasReturnType);
 	}
 }

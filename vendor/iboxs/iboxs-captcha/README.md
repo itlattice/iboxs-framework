@@ -1,6 +1,6 @@
 # iboxs-captcha
 
-iboxsphp6 验证码类库
+iboxsphp 验证码类库
 
 ## 安装
 > composer require iboxs/iboxs-captcha

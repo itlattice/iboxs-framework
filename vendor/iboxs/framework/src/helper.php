@@ -38,6 +38,7 @@ use iboxs\response\Redirect;
 use iboxs\response\View;
 use iboxs\response\Xml;
 use iboxs\route\Url as UrlBuild;
+use iboxs\Transformer;
 use iboxs\Validate;
 
 if (!function_exists('abort')) {
@@ -581,7 +582,19 @@ if (!function_exists('display')) {
         return Response::create($content, 'view', $code)->isContent(true)->assign($vars)->filter($filter);
     }
 }
-
+if (!function_exists('isHttp')) {
+    function isHttp($url){
+        $head=substr($url,0,7);
+        if($head=='http://'||$head=='https:/'){
+            return true;
+        }
+        $info=parse_url($url);
+        if(isset($info['host'])){
+            return true;
+        }
+        return false;
+    }
+}
 if (!function_exists('xml')) {
     /**
      * 获取\iboxs\response\Xml对象实例
@@ -675,6 +688,19 @@ if (!function_exists('root_path')) {
     }
 }
 
+if(!function_exists('model_path')){
+    /**
+     * 获取项目模型目录
+     *
+     * @param string $path
+     * @return string
+     */
+    function model_path($path = '')
+    {
+        return app()->getModelPath() . ($path ? $path . DIRECTORY_SEPARATOR : $path);
+    }
+}
+
 if (!function_exists('resource_path')) {
     /**
      * 获取项目资源目录
@@ -716,5 +742,16 @@ if(!function_exists('appName')){
             }
         }
         return $appName;
+    }
+}
+
+if(!function_exists('transformFormat')){
+    /**
+     * 转换格式
+     */
+    function transformFormat($data,$transformClass){
+        $transformer=new $transformClass();
+        $list=$transformer->listHandle($data);
+        return $list;
     }
 }

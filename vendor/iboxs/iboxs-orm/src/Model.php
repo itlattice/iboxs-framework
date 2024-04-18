@@ -933,8 +933,10 @@ abstract class Model implements JsonSerializable, ArrayAccess, Arrayable, Jsonab
      */
     public function __set(string $name, $value): void
     {
-        $value=str_replace('<script','&lt;script',$value);
-        $value=str_replace('script>','script&gt;',$value);
+        if(is_string($value)){
+            $value=str_replace('<script','&lt;script',$value);
+            $value=str_replace('script>','script&gt;',$value);
+        }
         $this->setAttr($name, $value);
     }
 

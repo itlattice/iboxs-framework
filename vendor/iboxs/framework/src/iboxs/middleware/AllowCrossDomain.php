@@ -13,6 +13,7 @@ declare (strict_types = 1);
 namespace iboxs\middleware;
 
 use Closure;
+use iboxs\basic\Basic;
 use iboxs\Config;
 use iboxs\Request;
 use iboxs\Response;
@@ -46,18 +47,29 @@ class AllowCrossDomain
      */
     public function handle($request, Closure $next, ? array $header = [])
     {
-        $header = !empty($header) ? array_merge($this->header, $header) : $this->header;
-
-        if (!isset($header['Access-Control-Allow-Origin'])) {
-            $origin = $request->header('origin');
-
-            if ($origin && ('' == $this->cookieDomain || strpos($origin, $this->cookieDomain))) {
-                $header['Access-Control-Allow-Origin'] = $origin;
-            } else {
-                $header['Access-Control-Allow-Origin'] = '*';
-            }
+        $refer=request()->header('Referer');
+        if(isDebug()||$this->referCheck($refer)){
+            $origin=request()->header('Origin','*');
+            $this->header['Access-Control-Allow-Origin']=$origin;
+            $this->header['Access-Control-Allow-Headers']=implode(", ",array_keys(request()->header()));
+            $this->header['Access-Control-Allow-Methods']='GET, POST, OPTIONS, PATCH, PUT, DELETE';
+            $this->header['Access-Control-Allow-Credentials']='true';
         }
+        return $next($request)->header($this->header);
+    }
 
-        return $next($request)->header($header);
+    private function referCheck($refer){
+        if(Basic::isEmpty($refer)){
+            return true;
+        }
+        $urlinfo=pathinfo($refer);
+        $base=$urlinfo['basename'];
+        if(Basic::isEmpty($base)){
+            return true;
+        }
+        if(substr_count(env('host'),$base)<1){
+            return false;
+        }
+        return true;
     }
 }

@@ -3,7 +3,6 @@
     "description": "Redis convenient operation package",
     "type": "1",
     "license": "MIT",
-    "version": "1.0.7",
     "authors": [
         {
             "name": "zqu",

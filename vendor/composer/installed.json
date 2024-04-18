@@ -2,30 +2,30 @@
     "packages": [
         {
             "name": "guzzlehttp/command",
-            "version": "1.3.0",
-            "version_normalized": "1.3.0.0",
+            "version": "1.3.1",
+            "version_normalized": "1.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/command.git",
-                "reference": "3372bcfd79d4b357b6871665bf06155515e8d844"
+                "reference": "0eebc653784f4902b3272e826fe8e88743d14e77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/command/zipball/3372bcfd79d4b357b6871665bf06155515e8d844",
-                "reference": "3372bcfd79d4b357b6871665bf06155515e8d844",
+                "url": "https://api.github.com/repos/guzzle/command/zipball/0eebc653784f4902b3272e826fe8e88743d14e77",
+                "reference": "0eebc653784f4902b3272e826fe8e88743d14e77",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^7.5.1",
-                "guzzlehttp/promises": "^1.5.3 || ^2.0",
-                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
+                "guzzlehttp/guzzle": "^7.8",
+                "guzzlehttp/promises": "^1.5.3 || ^2.0.1",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
                 "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "phpunit/phpunit": "^8.5.19 || ^9.5.8"
             },
-            "time": "2023-05-21T14:15:09+00:00",
+            "time": "2023-12-03T20:46:20+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -68,7 +68,7 @@
             "description": "Provides the foundation for building command-based web service clients",
             "support": {
                 "issues": "https://github.com/guzzle/command/issues",
-                "source": "https://github.com/guzzle/command/tree/1.3.0"
+                "source": "https://github.com/guzzle/command/tree/1.3.1"
             },
             "funding": [
                 {
@@ -88,17 +88,17 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.8.0",
-            "version_normalized": "7.8.0.0",
+            "version": "7.8.1",
+            "version_normalized": "7.8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9"
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1110f66a6530a40fe7aea0378fe608ee2b2248f9",
-                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/41042bc7ab002487b876a0683fc8dce04ddce104",
+                "reference": "41042bc7ab002487b876a0683fc8dce04ddce104",
                 "shasum": ""
             },
             "require": {
@@ -113,11 +113,11 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
                 "php-http/message-factory": "^1.1",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -125,7 +125,7 @@
                 "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
-            "time": "2023-08-27T10:20:53+00:00",
+            "time": "2023-12-03T20:35:24+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -197,7 +197,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.8.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.8.1"
             },
             "funding": [
                 {
@@ -217,34 +217,34 @@
         },
         {
             "name": "guzzlehttp/guzzle-services",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
+            "version": "1.4.1",
+            "version_normalized": "1.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle-services.git",
-                "reference": "f4bb1c205152a56741624b88753732e01a60565c"
+                "reference": "bcab7c0d61672b606510a6fe5af3039d04968c0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle-services/zipball/f4bb1c205152a56741624b88753732e01a60565c",
-                "reference": "f4bb1c205152a56741624b88753732e01a60565c",
+                "url": "https://api.github.com/repos/guzzle/guzzle-services/zipball/bcab7c0d61672b606510a6fe5af3039d04968c0f",
+                "reference": "bcab7c0d61672b606510a6fe5af3039d04968c0f",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/command": "^1.3",
-                "guzzlehttp/guzzle": "^7.7",
-                "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
+                "guzzlehttp/command": "^1.3.1",
+                "guzzlehttp/guzzle": "^7.8",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
                 "guzzlehttp/uri-template": "^1.0.1",
                 "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "phpunit/phpunit": "^8.5.19 || ^9.5.8"
             },
             "suggest": {
                 "gimler/guzzle-description-loader": "^0.0.4"
             },
-            "time": "2023-05-21T14:21:30+00:00",
+            "time": "2023-12-03T20:48:14+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -287,7 +287,7 @@
             "description": "Provides an implementation of the Guzzle Command library that uses Guzzle service descriptions to describe web services, serialize requests, and parse responses into easy to use model structures.",
             "support": {
                 "issues": "https://github.com/guzzle/guzzle-services/issues",
-                "source": "https://github.com/guzzle/guzzle-services/tree/1.4.0"
+                "source": "https://github.com/guzzle/guzzle-services/tree/1.4.1"
             },
             "funding": [
                 {
@@ -307,27 +307,27 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "2.0.1",
-            "version_normalized": "2.0.1.0",
+            "version": "2.0.2",
+            "version_normalized": "2.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d"
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/111166291a0f8130081195ac4556a5587d7f1b5d",
-                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/bbff78d96034045e58e13dedd6ad91b5d1253223",
+                "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
-            "time": "2023-08-03T15:11:55+00:00",
+            "time": "2023-12-03T20:19:20+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -373,7 +373,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.1"
+                "source": "https://github.com/guzzle/promises/tree/2.0.2"
             },
             "funding": [
                 {
@@ -393,17 +393,17 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.6.1",
-            "version_normalized": "2.6.1.0",
+            "version": "2.6.2",
+            "version_normalized": "2.6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727"
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
-                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/45b30f99ac27b5ca93cb4831afe16285f57b8221",
+                "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221",
                 "shasum": ""
             },
             "require": {
@@ -417,14 +417,14 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
+                "bamarni/composer-bin-plugin": "^1.8.2",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "time": "2023-08-27T10:13:57+00:00",
+            "time": "2023-12-03T20:05:35+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -492,7 +492,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.6.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.6.2"
             },
             "funding": [
                 {
@@ -512,30 +512,36 @@
         },
         {
             "name": "guzzlehttp/uri-template",
-            "version": "v1.0.2",
-            "version_normalized": "1.0.2.0",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/uri-template.git",
-                "reference": "61bf437fc2197f587f6857d3ff903a24f1731b5d"
+                "reference": "ecea8feef63bd4fef1f037ecb288386999ecc11c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/uri-template/zipball/61bf437fc2197f587f6857d3ff903a24f1731b5d",
-                "reference": "61bf437fc2197f587f6857d3ff903a24f1731b5d",
+                "url": "https://api.github.com/repos/guzzle/uri-template/zipball/ecea8feef63bd4fef1f037ecb288386999ecc11c",
+                "reference": "ecea8feef63bd4fef1f037ecb288386999ecc11c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "symfony/polyfill-php80": "^1.17"
+                "symfony/polyfill-php80": "^1.24"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.1",
-                "phpunit/phpunit": "^8.5.19 || ^9.5.8",
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.36 || ^9.6.15",
                 "uri-template/tests": "1.0.0"
             },
-            "time": "2023-08-27T10:19:19+00:00",
+            "time": "2023-12-03T19:50:20+00:00",
             "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
@@ -575,7 +581,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/uri-template/issues",
-                "source": "https://github.com/guzzle/uri-template/tree/v1.0.2"
+                "source": "https://github.com/guzzle/uri-template/tree/v1.0.3"
             },
             "funding": [
                 {
@@ -684,24 +690,24 @@
         },
         {
             "name": "iboxs/framework",
-            "version": "v6.1.1",
-            "version_normalized": "6.1.1.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/top-iboxs/framework.git",
-                "reference": "2cb56f3e6f3c479fe90ea5f28d38d3b5ef6c4210"
+                "url": "https://github.com/iboxs-frame/framework.git",
+                "reference": "f074abb24edca219e0c453ecd1ea55a6aedd9c79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-iboxs/framework/zipball/2cb56f3e6f3c479fe90ea5f28d38d3b5ef6c4210",
-                "reference": "2cb56f3e6f3c479fe90ea5f28d38d3b5ef6c4210",
+                "url": "https://api.github.com/repos/iboxs-frame/framework/zipball/f074abb24edca219e0c453ecd1ea55a6aedd9c79",
+                "reference": "f074abb24edca219e0c453ecd1ea55a6aedd9c79",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "iboxs/iboxs-helper": "^3.1.1",
-                "iboxs/iboxs-orm": "^2.0",
+                "iboxs/iboxs-helper": "^1.1",
+                "iboxs/iboxs-orm": "^1.1",
                 "php": ">=7.2.5",
                 "psr/container": "~1.0",
                 "psr/http-message": "^1.0",
@@ -714,7 +720,7 @@
                 "mockery/mockery": "^1.2",
                 "phpunit/phpunit": "^7.0"
             },
-            "time": "2022-10-26T03:48:53+00:00",
+            "time": "2024-04-18T09:55:39+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -735,6 +741,10 @@
                 {
                     "name": "yunwuxin",
                     "email": "448901948@qq.com"
+                },
+                {
+                    "name": "itlattice",
+                    "email": "itlattice@gmail.com"
                 }
             ],
             "description": "The iboxsPHP Framework.",
@@ -745,30 +755,30 @@
                 "orm"
             ],
             "support": {
-                "issues": "https://github.com/top-iboxs/framework/issues",
-                "source": "https://github.com/top-iboxs/framework/tree/v6.1.1"
+                "issues": "https://github.com/iboxs-frame/framework/issues",
+                "source": "https://github.com/iboxs-frame/framework/tree/1.1.0"
             },
             "install-path": "../iboxs/framework"
         },
         {
             "name": "iboxs/iboxs-captcha",
-            "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iboxs-frame/iboxs-captcha.git",
-                "reference": "1b27896468125bc81d06f2f4b330f17837b9cb25"
+                "reference": "89e391871a0e4d070726b0c1f0abf5ca3b496e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iboxs-frame/iboxs-captcha/zipball/1b27896468125bc81d06f2f4b330f17837b9cb25",
-                "reference": "1b27896468125bc81d06f2f4b330f17837b9cb25",
+                "url": "https://api.github.com/repos/iboxs-frame/iboxs-captcha/zipball/89e391871a0e4d070726b0c1f0abf5ca3b496e84",
+                "reference": "89e391871a0e4d070726b0c1f0abf5ca3b496e84",
                 "shasum": ""
             },
             "require": {
-                "iboxs/framework": "^1.0"
+                "iboxs/framework": "^1.1"
             },
-            "time": "2023-09-25T14:44:25+00:00",
+            "time": "2024-04-18T09:58:14+00:00",
             "type": "library",
             "extra": {
                 "iboxs": {
@@ -797,28 +807,32 @@
                 {
                     "name": "yunwuxin",
                     "email": "448901948@qq.com"
+                },
+                {
+                    "name": "itlattice",
+                    "email": "itlattice@gmail.com"
                 }
             ],
             "description": "captcha package for iboxsphp",
             "support": {
                 "issues": "https://github.com/iboxs-frame/iboxs-captcha/issues",
-                "source": "https://github.com/iboxs-frame/iboxs-captcha/tree/1.0.0"
+                "source": "https://github.com/iboxs-frame/iboxs-captcha/tree/1.1.0"
             },
             "install-path": "../iboxs/iboxs-captcha"
         },
         {
             "name": "iboxs/iboxs-filesystem",
-            "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iboxs-frame/iboxs-filesystem.git",
-                "reference": "c70dbb9b7dcc47310678d3510a01bb4649295f77"
+                "reference": "0d5d8bfef9fcdf38316a053d2665e300b52124b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iboxs-frame/iboxs-filesystem/zipball/c70dbb9b7dcc47310678d3510a01bb4649295f77",
-                "reference": "c70dbb9b7dcc47310678d3510a01bb4649295f77",
+                "url": "https://api.github.com/repos/iboxs-frame/iboxs-filesystem/zipball/0d5d8bfef9fcdf38316a053d2665e300b52124b1",
+                "reference": "0d5d8bfef9fcdf38316a053d2665e300b52124b1",
                 "shasum": ""
             },
             "require": {
@@ -830,7 +844,7 @@
                 "mockery/mockery": "^1.2",
                 "phpunit/phpunit": "^8.0"
             },
-            "time": "2023-09-25T14:44:47+00:00",
+            "time": "2024-04-18T10:01:33+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -846,28 +860,32 @@
                 {
                     "name": "yunwuxin",
                     "email": "448901948@qq.com"
+                },
+                {
+                    "name": "itlattice",
+                    "email": "itlattice@gmail.com"
                 }
             ],
             "description": "The iboxsPHP6.1 Filesystem Package",
             "support": {
                 "issues": "https://github.com/iboxs-frame/iboxs-filesystem/issues",
-                "source": "https://github.com/iboxs-frame/iboxs-filesystem/tree/1.0.0"
+                "source": "https://github.com/iboxs-frame/iboxs-filesystem/tree/1.1.0"
             },
             "install-path": "../iboxs/iboxs-filesystem"
         },
         {
             "name": "iboxs/iboxs-helper",
-            "version": "v3.1.6",
-            "version_normalized": "3.1.6.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/top-iboxs/iboxs-helper.git",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff"
+                "url": "https://github.com/iboxs-frame/iboxs-helper.git",
+                "reference": "74c36ceb1ab77d6f251c3f84c3247428e888a678"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-iboxs/iboxs-helper/zipball/769acbe50a4274327162f9c68ec2e89a38eb2aff",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff",
+                "url": "https://api.github.com/repos/iboxs-frame/iboxs-helper/zipball/74c36ceb1ab77d6f251c3f84c3247428e888a678",
+                "reference": "74c36ceb1ab77d6f251c3f84c3247428e888a678",
                 "shasum": ""
             },
             "require": {
@@ -876,7 +894,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^9.5"
             },
-            "time": "2021-12-15T04:27:55+00:00",
+            "time": "2024-04-18T10:02:51+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -893,14 +911,14 @@
             ],
             "authors": [
                 {
-                    "name": "yunwuxin",
-                    "email": "448901948@qq.com"
+                    "name": "itlattice",
+                    "email": "itlattice@gmail.com"
                 }
             ],
             "description": "The iboxsPHP6 Helper Package",
             "support": {
-                "issues": "https://github.com/top-iboxs/iboxs-helper/issues",
-                "source": "https://github.com/top-iboxs/iboxs-helper/tree/v3.1.6"
+                "issues": "https://github.com/iboxs-frame/iboxs-helper/issues",
+                "source": "https://github.com/iboxs-frame/iboxs-helper/tree/1.1.0"
             },
             "install-path": "../iboxs/iboxs-helper"
         },
@@ -957,23 +975,23 @@
         },
         {
             "name": "iboxs/iboxs-orm",
-            "version": "v2.0.56",
-            "version_normalized": "2.0.56.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/top-iboxs/iboxs-orm.git",
-                "reference": "75b8512736daaa056d511f42c15bed87c9f3605a"
+                "url": "https://github.com/iboxs-frame/iboxs-orm.git",
+                "reference": "0ca3ddeea8bd41816108d9636a4016f62b224bec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-iboxs/iboxs-orm/zipball/75b8512736daaa056d511f42c15bed87c9f3605a",
-                "reference": "75b8512736daaa056d511f42c15bed87c9f3605a",
+                "url": "https://api.github.com/repos/iboxs-frame/iboxs-orm/zipball/0ca3ddeea8bd41816108d9636a4016f62b224bec",
+                "reference": "0ca3ddeea8bd41816108d9636a4016f62b224bec",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pdo": "*",
-                "iboxs/iboxs-helper": "^3.1",
+                "iboxs/iboxs-helper": "^1.1",
                 "php": ">=7.1.0",
                 "psr/log": "^1.0|^2.0",
                 "psr/simple-cache": "^1.0|^2.0"
@@ -981,7 +999,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^7|^8|^9.5"
             },
-            "time": "2022-12-15T02:52:53+00:00",
+            "time": "2024-04-18T10:04:15+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1008,8 +1026,8 @@
                 "orm"
             ],
             "support": {
-                "issues": "https://github.com/top-iboxs/iboxs-orm/issues",
-                "source": "https://github.com/top-iboxs/iboxs-orm/tree/v2.0.56"
+                "issues": "https://github.com/iboxs-frame/iboxs-orm/issues",
+                "source": "https://github.com/iboxs-frame/iboxs-orm/tree/1.1.0"
             },
             "install-path": "../iboxs/iboxs-orm"
         },
@@ -1270,23 +1288,23 @@
         },
         {
             "name": "iboxs/redis",
-            "version": "1.0.7",
-            "version_normalized": "1.0.7.0",
+            "version": "1.0.9",
+            "version_normalized": "1.0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itlattice/iboxs-redis.git",
-                "reference": "d7b94a374001abb5f3a94b4095b48524c1c61cee"
+                "reference": "b1df0d6920df0fc83f2b0e29b48ee1f64ad2a443"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itlattice/iboxs-redis/zipball/d7b94a374001abb5f3a94b4095b48524c1c61cee",
-                "reference": "d7b94a374001abb5f3a94b4095b48524c1c61cee",
+                "url": "https://api.github.com/repos/itlattice/iboxs-redis/zipball/b1df0d6920df0fc83f2b0e29b48ee1f64ad2a443",
+                "reference": "b1df0d6920df0fc83f2b0e29b48ee1f64ad2a443",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0"
             },
-            "time": "2023-05-20T15:44:35+00:00",
+            "time": "2024-03-17T04:55:13+00:00",
             "type": "1",
             "installation-source": "dist",
             "autoload": {
@@ -1307,7 +1325,7 @@
             "description": "Redis convenient operation package",
             "support": {
                 "issues": "https://github.com/itlattice/iboxs-redis/issues",
-                "source": "https://github.com/itlattice/iboxs-redis/tree/1.0.7"
+                "source": "https://github.com/itlattice/iboxs-redis/tree/1.0.9"
             },
             "install-path": "../iboxs/redis"
         },
@@ -1446,17 +1464,17 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.13.0",
-            "version_normalized": "1.13.0.0",
+            "version": "1.15.0",
+            "version_normalized": "1.15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "a6dfb1194a2946fcdc1f38219445234f65b35c96"
+                "reference": "ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/a6dfb1194a2946fcdc1f38219445234f65b35c96",
-                "reference": "a6dfb1194a2946fcdc1f38219445234f65b35c96",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301",
+                "reference": "ce0f4d1e8a6f4eb0ddff33f57c69c50fd09f4301",
                 "shasum": ""
             },
             "require": {
@@ -1468,7 +1486,7 @@
                 "phpstan/phpstan": "^0.12.68",
                 "phpunit/phpunit": "^8.5.8 || ^9.3 || ^10.0"
             },
-            "time": "2023-08-05T12:09:49+00:00",
+            "time": "2024-01-28T23:22:08+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1489,7 +1507,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.13.0"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.15.0"
             },
             "funding": [
                 {
@@ -1505,17 +1523,17 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v4.0.9",
-            "version_normalized": "4.0.9.0",
+            "version": "v4.1.4",
+            "version_normalized": "4.1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "72cf9e20686904678d9c1de664c6f7a8c9d676ed"
+                "reference": "b135071d8da108445e4df2fc6a75522b23c0237d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/72cf9e20686904678d9c1de664c6f7a8c9d676ed",
-                "reference": "72cf9e20686904678d9c1de664c6f7a8c9d676ed",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/b135071d8da108445e4df2fc6a75522b23c0237d",
+                "reference": "b135071d8da108445e4df2fc6a75522b23c0237d",
                 "shasum": ""
             },
             "require": {
@@ -1525,18 +1543,18 @@
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "dev-master",
                 "nette/tester": "^2.4",
-                "nikic/php-parser": "^4.15",
+                "nikic/php-parser": "^4.18 || ^5.0",
                 "phpstan/phpstan": "^1.0",
                 "tracy/tracy": "^2.8"
             },
             "suggest": {
                 "nikic/php-parser": "to use ClassType::from(withBodies: true) & ClassType::fromCode()"
             },
-            "time": "2023-08-29T19:09:26+00:00",
+            "time": "2024-03-07T23:06:26+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "installation-source": "dist",
@@ -1571,23 +1589,23 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v4.0.9"
+                "source": "https://github.com/nette/php-generator/tree/v4.1.4"
             },
             "install-path": "../nette/php-generator"
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.2",
-            "version_normalized": "4.0.2.0",
+            "version": "v4.0.4",
+            "version_normalized": "4.0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "cead6637226456b35e1175cc53797dd585d85545"
+                "reference": "d3ad0aa3b9f934602cb3e3902ebccf10be34d218"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/cead6637226456b35e1175cc53797dd585d85545",
-                "reference": "cead6637226456b35e1175cc53797dd585d85545",
+                "url": "https://api.github.com/repos/nette/utils/zipball/d3ad0aa3b9f934602cb3e3902ebccf10be34d218",
+                "reference": "d3ad0aa3b9f934602cb3e3902ebccf10be34d218",
                 "shasum": ""
             },
             "require": {
@@ -1611,7 +1629,7 @@
                 "ext-mbstring": "to use Strings::lower() etc...",
                 "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()"
             },
-            "time": "2023-09-19T11:58:07+00:00",
+            "time": "2024-01-17T16:50:36+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1660,7 +1678,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.2"
+                "source": "https://github.com/nette/utils/tree/v4.0.4"
             },
             "install-path": "../nette/utils"
         },
@@ -1930,17 +1948,17 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.8.1",
-            "version_normalized": "6.8.1.0",
+            "version": "v6.9.1",
+            "version_normalized": "6.9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "e88da8d679acc3824ff231fdc553565b802ac016"
+                "reference": "039de174cd9c17a8389754d3b877a2ed22743e18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/e88da8d679acc3824ff231fdc553565b802ac016",
-                "reference": "e88da8d679acc3824ff231fdc553565b802ac016",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/039de174cd9c17a8389754d3b877a2ed22743e18",
+                "reference": "039de174cd9c17a8389754d3b877a2ed22743e18",
                 "shasum": ""
             },
             "require": {
@@ -1960,6 +1978,7 @@
                 "yoast/phpunit-polyfills": "^1.0.4"
             },
             "suggest": {
+                "decomplexity/SendOauth2": "Adapter for using XOAUTH2 authentication",
                 "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
                 "ext-openssl": "Needed for secure SMTP sending and DKIM signing",
                 "greew/oauth2-azure-provider": "Needed for Microsoft Azure XOAUTH2 authentication",
@@ -1969,7 +1988,7 @@
                 "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)",
                 "thenetworg/oauth2-azure": "Needed for Microsoft XOAUTH2 authentication"
             },
-            "time": "2023-08-29T08:26:30+00:00",
+            "time": "2023-11-25T22:23:28+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2001,7 +2020,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.8.1"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.9.1"
             },
             "funding": [
                 {
@@ -2013,17 +2032,17 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.23",
-            "version_normalized": "3.0.23.0",
+            "version": "3.0.37",
+            "version_normalized": "3.0.37.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "866cc78fbd82462ffd880e3f65692afe928bed50"
+                "reference": "cfa2013d0f68c062055180dd4328cc8b9d1f30b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/866cc78fbd82462ffd880e3f65692afe928bed50",
-                "reference": "866cc78fbd82462ffd880e3f65692afe928bed50",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/cfa2013d0f68c062055180dd4328cc8b9d1f30b8",
+                "reference": "cfa2013d0f68c062055180dd4328cc8b9d1f30b8",
                 "shasum": ""
             },
             "require": {
@@ -2041,7 +2060,7 @@
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
                 "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
             },
-            "time": "2023-09-18T17:22:01+00:00",
+            "time": "2024-03-03T02:14:58+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2106,7 +2125,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.23"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.37"
             },
             "funding": [
                 {
@@ -2465,17 +2484,17 @@
         },
         {
             "name": "qcloud/cos-sdk-v5",
-            "version": "v2.6.6",
-            "version_normalized": "2.6.6.0",
+            "version": "v2.6.9",
+            "version_normalized": "2.6.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tencentyun/cos-php-sdk-v5.git",
-                "reference": "9d82ccb550fe2dca1adfb53835791d314023a9a8"
+                "reference": "85e11f94ff4e13f3f866c4720902e991221b8baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tencentyun/cos-php-sdk-v5/zipball/9d82ccb550fe2dca1adfb53835791d314023a9a8",
-                "reference": "9d82ccb550fe2dca1adfb53835791d314023a9a8",
+                "url": "https://api.github.com/repos/tencentyun/cos-php-sdk-v5/zipball/85e11f94ff4e13f3f866c4720902e991221b8baa",
+                "reference": "85e11f94ff4e13f3f866c4720902e991221b8baa",
                 "shasum": ""
             },
             "require": {
@@ -2488,7 +2507,7 @@
                 "guzzlehttp/psr7": "^1.3.1 || ^2.0",
                 "php": ">=5.6"
             },
-            "time": "2023-08-23T08:14:27+00:00",
+            "time": "2024-01-17T02:50:42+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2530,7 +2549,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tencentyun/cos-php-sdk-v5/issues",
-                "source": "https://github.com/tencentyun/cos-php-sdk-v5/tree/v2.6.6"
+                "source": "https://github.com/tencentyun/cos-php-sdk-v5/tree/v2.6.9"
             },
             "install-path": "../qcloud/cos-sdk-v5"
         },
@@ -2626,23 +2645,23 @@
         },
         {
             "name": "stechstudio/backoff",
-            "version": "1.2",
-            "version_normalized": "1.2.0.0",
+            "version": "1.3",
+            "version_normalized": "1.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stechstudio/backoff.git",
-                "reference": "816e46107a6be2e1072ba0ff2cb26034872dfa49"
+                "reference": "1758371711fa04c3a6c61b8e77707d5c6c1c188a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stechstudio/backoff/zipball/816e46107a6be2e1072ba0ff2cb26034872dfa49",
-                "reference": "816e46107a6be2e1072ba0ff2cb26034872dfa49",
+                "url": "https://api.github.com/repos/stechstudio/backoff/zipball/1758371711fa04c3a6c61b8e77707d5c6c1c188a",
+                "reference": "1758371711fa04c3a6c61b8e77707d5c6c1c188a",
                 "shasum": ""
             },
             "require-dev": {
-                "phpunit/phpunit": "5.5.*"
+                "phpunit/phpunit": "^10.0"
             },
-            "time": "2020-12-26T14:57:10+00:00",
+            "time": "2024-03-29T12:04:30+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2666,7 +2685,7 @@
             "description": "PHP library providing retry functionality with multiple backoff strategies and jitter support",
             "support": {
                 "issues": "https://github.com/stechstudio/backoff/issues",
-                "source": "https://github.com/stechstudio/backoff/tree/1.2"
+                "source": "https://github.com/stechstudio/backoff/tree/1.3"
             },
             "install-path": "../stechstudio/backoff"
         },
@@ -2707,8 +2726,8 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "v3.4.0",
+            "version_normalized": "3.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -2757,7 +2776,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -2777,17 +2796,17 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.27",
-            "version_normalized": "5.4.27.0",
+            "version": "v5.4.35",
+            "version_normalized": "5.4.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "ff4bce3c33451e7ec778070e45bd23f74214cd5d"
+                "reference": "abe6d6f77d9465fed3cd2d029b29d03b56b56435"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/ff4bce3c33451e7ec778070e45bd23f74214cd5d",
-                "reference": "ff4bce3c33451e7ec778070e45bd23f74214cd5d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/abe6d6f77d9465fed3cd2d029b29d03b56b56435",
+                "reference": "abe6d6f77d9465fed3cd2d029b29d03b56b56435",
                 "shasum": ""
             },
             "require": {
@@ -2795,7 +2814,7 @@
                 "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2023-07-31T08:02:31+00:00",
+            "time": "2024-01-23T13:51:25+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2823,7 +2842,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.4.27"
+                "source": "https://github.com/symfony/finder/tree/v5.4.35"
             },
             "funding": [
                 {
@@ -2843,17 +2862,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.28.0",
-            "version_normalized": "1.28.0.0",
+            "version": "v1.29.0",
+            "version_normalized": "1.29.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "42292d99c55abe617799667f454222c54c60e229"
+                "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
-                "reference": "42292d99c55abe617799667f454222c54c60e229",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
+                "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
                 "shasum": ""
             },
             "require": {
@@ -2865,12 +2884,9 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2023-07-28T09:04:16+00:00",
+            "time": "2024-01-29T20:11:03+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -2909,7 +2925,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.29.0"
             },
             "funding": [
                 {
@@ -2929,28 +2945,25 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.28.0",
-            "version_normalized": "1.28.0.0",
+            "version": "v1.29.0",
+            "version_normalized": "1.29.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "70f4aebd92afca2f865444d30a4d2151c13c3179"
+                "reference": "861391a8da9a04cbad2d232ddd9e4893220d6e25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/70f4aebd92afca2f865444d30a4d2151c13c3179",
-                "reference": "70f4aebd92afca2f865444d30a4d2151c13c3179",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/861391a8da9a04cbad2d232ddd9e4893220d6e25",
+                "reference": "861391a8da9a04cbad2d232ddd9e4893220d6e25",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2023-01-26T09:26:14+00:00",
+            "time": "2024-01-29T20:11:03+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -2988,7 +3001,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.29.0"
             },
             "funding": [
                 {
@@ -3008,28 +3021,25 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.28.0",
-            "version_normalized": "1.28.0.0",
+            "version": "v1.29.0",
+            "version_normalized": "1.29.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
+                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2023-01-26T09:26:14+00:00",
+            "time": "2024-01-29T20:11:03+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -3074,7 +3084,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.29.0"
             },
             "funding": [
                 {

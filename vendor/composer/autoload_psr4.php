@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'model\\' => array($baseDir . '/model'),
     'iboxs\\wechat\\' => array($vendorDir . '/iboxs/wechat/src'),
     'iboxs\\view\\driver\\' => array($vendorDir . '/iboxs/iboxs-view/src'),
     'iboxs\\trace\\' => array($vendorDir . '/iboxs/iboxs-trace/src'),
@@ -17,7 +18,7 @@ return array(
     'iboxs\\captcha\\' => array($vendorDir . '/iboxs/iboxs-captcha/src'),
     'iboxs\\basic\\' => array($vendorDir . '/iboxs/basic/src'),
     'iboxs\\app\\' => array($vendorDir . '/iboxs/iboxs-multi-app/src'),
-    'iboxs\\' => array($vendorDir . '/iboxs/iboxs-filesystem/src', $vendorDir . '/iboxs/iboxs-helper/src', $vendorDir . '/iboxs/iboxs-orm/src', $vendorDir . '/iboxs/iboxs-template/src', $vendorDir . '/iboxs/framework/src/iboxs'),
+    'iboxs\\' => array($vendorDir . '/iboxs/framework/src/iboxs', $vendorDir . '/iboxs/iboxs-filesystem/src', $vendorDir . '/iboxs/iboxs-helper/src', $vendorDir . '/iboxs/iboxs-orm/src', $vendorDir . '/iboxs/iboxs-template/src'),
     'app\\' => array($baseDir . '/app'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php72\\' => array($vendorDir . '/symfony/polyfill-php72'),

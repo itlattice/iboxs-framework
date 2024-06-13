@@ -28,6 +28,10 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         array (
             'phpseclib3\\' => 11,
         ),
+        'm' => 
+        array (
+            'model\\' => 6,
+        ),
         'i' => 
         array (
             'iboxs\\wechat\\' => 13,
@@ -93,6 +97,10 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
         ),
+        'model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/model',
+        ),
         'iboxs\\wechat\\' => 
         array (
             0 => __DIR__ . '/..' . '/iboxs/wechat/src',
@@ -135,11 +143,11 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         ),
         'iboxs\\' => 
         array (
-            0 => __DIR__ . '/..' . '/iboxs/iboxs-filesystem/src',
-            1 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
-            2 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
-            3 => __DIR__ . '/..' . '/iboxs/iboxs-template/src',
-            4 => __DIR__ . '/..' . '/iboxs/framework/src/iboxs',
+            0 => __DIR__ . '/..' . '/iboxs/framework/src/iboxs',
+            1 => __DIR__ . '/..' . '/iboxs/iboxs-filesystem/src',
+            2 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
+            3 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
+            4 => __DIR__ . '/..' . '/iboxs/iboxs-template/src',
         ),
         'app\\' => 
         array (

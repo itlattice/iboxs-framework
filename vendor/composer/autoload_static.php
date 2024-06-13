@@ -135,11 +135,11 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         ),
         'iboxs\\' => 
         array (
-            0 => __DIR__ . '/..' . '/iboxs/framework/src/iboxs',
-            1 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
-            2 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
-            3 => __DIR__ . '/..' . '/iboxs/iboxs-filesystem/src',
-            4 => __DIR__ . '/..' . '/iboxs/iboxs-template/src',
+            0 => __DIR__ . '/..' . '/iboxs/iboxs-filesystem/src',
+            1 => __DIR__ . '/..' . '/iboxs/iboxs-helper/src',
+            2 => __DIR__ . '/..' . '/iboxs/iboxs-orm/src',
+            3 => __DIR__ . '/..' . '/iboxs/iboxs-template/src',
+            4 => __DIR__ . '/..' . '/iboxs/framework/src/iboxs',
         ),
         'app\\' => 
         array (
@@ -191,8 +191,8 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -323,14 +323,17 @@ class ComposerStaticInit683c7a9ff07f9d56fa580fd15f4675c0
         'Nette\\Utils\\Html' => __DIR__ . '/..' . '/nette/utils/src/Utils/Html.php',
         'Nette\\Utils\\IHtmlString' => __DIR__ . '/..' . '/nette/utils/src/compatibility.php',
         'Nette\\Utils\\Image' => __DIR__ . '/..' . '/nette/utils/src/Utils/Image.php',
+        'Nette\\Utils\\ImageColor' => __DIR__ . '/..' . '/nette/utils/src/Utils/ImageColor.php',
         'Nette\\Utils\\ImageException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\ImageType' => __DIR__ . '/..' . '/nette/utils/src/Utils/ImageType.php',
+        'Nette\\Utils\\Iterables' => __DIR__ . '/..' . '/nette/utils/src/Utils/Iterables.php',
         'Nette\\Utils\\Json' => __DIR__ . '/..' . '/nette/utils/src/Utils/Json.php',
         'Nette\\Utils\\JsonException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\ObjectHelpers' => __DIR__ . '/..' . '/nette/utils/src/Utils/ObjectHelpers.php',
         'Nette\\Utils\\Paginator' => __DIR__ . '/..' . '/nette/utils/src/Utils/Paginator.php',
         'Nette\\Utils\\Random' => __DIR__ . '/..' . '/nette/utils/src/Utils/Random.php',
         'Nette\\Utils\\Reflection' => __DIR__ . '/..' . '/nette/utils/src/Utils/Reflection.php',
+        'Nette\\Utils\\ReflectionMethod' => __DIR__ . '/..' . '/nette/utils/src/Utils/ReflectionMethod.php',
         'Nette\\Utils\\RegexpException' => __DIR__ . '/..' . '/nette/utils/src/Utils/exceptions.php',
         'Nette\\Utils\\Strings' => __DIR__ . '/..' . '/nette/utils/src/Utils/Strings.php',
         'Nette\\Utils\\Type' => __DIR__ . '/..' . '/nette/utils/src/Utils/Type.php',

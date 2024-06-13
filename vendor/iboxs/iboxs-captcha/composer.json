@@ -5,11 +5,15 @@
         {
             "name": "yunwuxin",
             "email": "448901948@qq.com"
+        },
+        {
+            "name": "itlattice",
+            "email": "itlattice@gmail.com"
         }
     ],
     "license": "Apache-2.0",
     "require": {
-        "iboxs/framework": "^1.0"
+        "iboxs/framework": "^1.1"
     },
     "autoload": {
         "psr-4": {

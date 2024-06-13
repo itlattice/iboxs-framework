@@ -582,7 +582,19 @@ if (!function_exists('display')) {
         return Response::create($content, 'view', $code)->isContent(true)->assign($vars)->filter($filter);
     }
 }
-
+if (!function_exists('isHttp')) {
+    function isHttp($url){
+        $head=substr($url,0,7);
+        if($head=='http://'||$head=='https:/'){
+            return true;
+        }
+        $info=parse_url($url);
+        if(isset($info['host'])){
+            return true;
+        }
+        return false;
+    }
+}
 if (!function_exists('xml')) {
     /**
      * 获取\iboxs\response\Xml对象实例

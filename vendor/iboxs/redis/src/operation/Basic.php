@@ -87,7 +87,7 @@ class Basic extends BaseOperation
      * @param mixed|null $default 默认值（无此键值返回的值）
      * @return mixed|null 获取到的值
      */
-    public function get(string $key,mixed $default=null){
+    public function get(string $key,$default=null){
         $key=$this->operationKey($key);
         $value=$this->handler->get($key);
         if($value===false){  //不存在
@@ -117,6 +117,12 @@ class Basic extends BaseOperation
      * @param array|string $key 键值（多个时以数组传入）
      */
     public function del($key){
+        if(is_array($key)){
+            foreach ($key as $item) {
+                $this->handler->del($item);
+            }
+            return true;
+        }
         $key=$this->operationKey($key);
         return $this->handler->del($key);
     }
@@ -166,6 +172,17 @@ class Basic extends BaseOperation
         return $this->handler->incrBy($key,$step);
     }
 
+
+    /**
+     * 获取所有键名
+     * @param string $key 键
+     * @return array|Redis
+     */
+    public function keys(string $key){
+        $key=$this->operationKey($key);
+        return $this->handler->keys($key);
+    }
+
     /**
      * 自减
      * @param string $key 键
@@ -194,5 +211,10 @@ class Basic extends BaseOperation
     public function persist(string $key){
         $key=$this->operationKey($key);
         return $this->handler->persist($key);
+    }
+
+    public function exists($key){
+        $key=$this->operationKey($key);
+        return $this->handler->exists($key);
     }
 }

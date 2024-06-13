@@ -30,24 +30,6 @@ trait Http
         return $host;
     }
 
-    public function sendJson($url,$data,&$httpCode=200){
-        $jsonStr=json_encode($data,JSON_UNESCAPED_UNICODE);
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonStr);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json; charset=utf-8',
-                'Content-Length: ' . strlen($jsonStr)
-            )
-        );
-        $response = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-        return $response;
-    }
-
     /**
      * 简单发起post请求(更多请求方式或请求需要可安装：composer require iboxs/http)
      * @param $url
@@ -68,6 +50,44 @@ trait Http
         $context = stream_context_create($options);
         $result = file_get_contents($url, false, $context);
         return $result;
+    }
+
+    public function curl_post_send($url, $params, $header){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        $return_content = curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        return array($httpcode, $return_content);
+    }
+
+    public function sendJson($url,$json,$header){
+//       dd($url,$json);
+        $httph = curl_init($url);
+        curl_setopt($httph, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($httph, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($httph, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($httph, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
+        $headers = array(
+            'Content-Type: application/json;charset=UTF-8'
+        );
+        $headers=array_merge($headers,$header);
+        curl_setopt($httph, CURLOPT_POST, 1);//设置为POST方式
+        curl_setopt($httph, CURLOPT_POSTFIELDS, $json);
+        curl_setopt($httph, CURLOPT_CONNECTTIMEOUT, 3);//设置超时时间
+        curl_setopt($httph, CURLOPT_HTTPHEADER, $headers);
+        $rst = curl_exec($httph);
+        $httpCode = curl_getinfo($httph, CURLINFO_HTTP_CODE);
+        $data = json_decode($rst,true);
+        curl_close($httph);
+        return $data;
     }
 
     /**
@@ -166,7 +186,7 @@ trait Http
             return 'unknow';
         }
     }
-
+    
     public function sendGetHeader($url,$headers){
         $ch = curl_init();
         # 判断是否是https

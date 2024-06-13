@@ -107,6 +107,11 @@ class App extends Container
     protected $resourcePath = '';
 
     /**
+     * 模型目录
+     */
+    protected $modelPath = '';
+
+    /**
      * 路由定义目录
      * @var string
      */
@@ -183,6 +188,7 @@ class App extends Container
         $this->appPath     = $this->rootPath . 'app' . DIRECTORY_SEPARATOR;
         $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
         $this->resourcePath = $this->rootPath . 'resource' . DIRECTORY_SEPARATOR;
+        $this->modelPath = $this->rootPath . 'model' . DIRECTORY_SEPARATOR;
 
         if (is_file($this->appPath . 'provider.php')) {
             $this->bind(include $this->appPath . 'provider.php');
@@ -372,6 +378,11 @@ class App extends Container
     public function getResourcePath():string
     {
         return $this->resourcePath;
+    }
+
+    public function getModelPath():string
+    {
+        return $this->modelPath;
     }
 
     /**

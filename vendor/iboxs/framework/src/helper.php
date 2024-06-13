@@ -38,6 +38,7 @@ use iboxs\response\Redirect;
 use iboxs\response\View;
 use iboxs\response\Xml;
 use iboxs\route\Url as UrlBuild;
+use iboxs\Transformer;
 use iboxs\Validate;
 
 if (!function_exists('abort')) {
@@ -409,9 +410,9 @@ if (!function_exists('response')) {
      * @param string     $type
      * @return Response
      */
-    function response($data = '', $code = 200, $header = [], $type = 'html'): Response
+    function response($data = '', $code = 200, $header = [], $type = 'html',$trace=true): Response
     {
-        return Response::create($data, $type, $code)->header($header);
+        return Response::create($data, $type, $code,$trace)->header($header);
     }
 }
 
@@ -561,9 +562,9 @@ if (!function_exists('view')) {
      * @param callable $filter   内容过滤
      * @return \iboxs\response\View
      */
-    function view(string $template = '', $vars = [], $code = 200, $filter = null): View
+    function view(string $template = '', $vars = [], $code = 200, $trace=true, $filter = null): View
     {
-        return Response::create($template, 'view', $code)->assign($vars)->filter($filter);
+        return Response::create($template, 'view', $code,$trace)->assign($vars)->filter($filter);
     }
 }
 
@@ -675,6 +676,19 @@ if (!function_exists('root_path')) {
     }
 }
 
+if(!function_exists('model_path')){
+    /**
+     * 获取项目模型目录
+     *
+     * @param string $path
+     * @return string
+     */
+    function model_path($path = '')
+    {
+        return app()->getModelPath() . ($path ? $path . DIRECTORY_SEPARATOR : $path);
+    }
+}
+
 if (!function_exists('resource_path')) {
     /**
      * 获取项目资源目录
@@ -716,5 +730,16 @@ if(!function_exists('appName')){
             }
         }
         return $appName;
+    }
+}
+
+if(!function_exists('transformFormat')){
+    /**
+     * 转换格式
+     */
+    function transformFormat($data,$transformClass){
+        $transformer=new $transformClass();
+        $list=$transformer->listHandle($data);
+        return $list;
     }
 }

@@ -19,6 +19,10 @@ namespace iboxs;
 abstract class Response
 {
     /**
+     * 输出调试数据
+     */
+    public $trace;
+    /**
      * 原始数据
      * @var mixed
      */
@@ -78,6 +82,7 @@ abstract class Response
      */
     protected $session;
 
+
     /**
      * 初始化
      * @access protected
@@ -100,11 +105,11 @@ abstract class Response
      * @param  int    $code 状态码
      * @return Response
      */
-    public static function create($data = '', string $type = 'html', int $code = 200): Response
+    public static function create($data = '', string $type = 'html', int $code = 200,bool $trace=true): Response
     {
         $class = false !== strpos($type, '\\') ? $type : '\\iboxs\\response\\' . ucfirst(strtolower($type));
 
-        return Container::getInstance()->invokeClass($class, [$data, $code]);
+        return Container::getInstance()->invokeClass($class, [$data, $code,$trace]);
     }
 
     /**

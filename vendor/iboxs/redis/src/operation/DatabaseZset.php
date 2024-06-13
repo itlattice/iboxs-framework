@@ -73,10 +73,10 @@ class DatabaseZset extends BaseOperation
      * @param int $end
      * @return array
      */
-    public function revRange(string $key, int $start, int $end)
+    public function revRange(string $key, int $start, int $end,$withScore=true)
     {
         $key = $this->operationKey($key);
-        return $this->handler->zRevRange($key, $start, $end);
+        return $this->handler->zRevRange($key, $start, $end,$withScore);
     }
 
     /**
@@ -90,6 +90,23 @@ class DatabaseZset extends BaseOperation
     {
         $key = $this->operationKey($key);
         return $this->handler->zRangeByScore($key, $start, $end);
+    }
+
+    /**
+     * 返回有序集key中，指定区间内的(从大到小排)成员
+     * @param $key
+     * @param int $start
+     * @param int $end
+     * @return false|int|Redis
+     */
+    public function ZUnionStore($key,array $keys)
+    {
+        $key = $this->operationKey($key);
+        $resultKeys=[];
+        foreach($keys as $k){
+            $resultKeys[]=$this->operationKey($k);
+        }
+        return $this->handler->zUnionStore($key, $resultKeys);
     }
 
     /**
@@ -168,9 +185,20 @@ class DatabaseZset extends BaseOperation
      * @param $array
      * @return array
      */
-    public function sort($key, $array)
+    public function sort($key, $array=null)
     {
         $key = $this->operationKey($key);
-        return $this->handler->sort($key, $array);
+        return $this->handler->sort($key, [
+            'limit' => array(0, 10),
+            'sort' => 'desc'
+        ]);
+    }
+
+    /**
+     * 有序列表score自增
+     */
+    public function inc(string $key, $value,$member){
+        $key = $this->operationKey($key);
+        $this->handler->zIncrBy($key, $value,$member);
     }
 }

@@ -23,6 +23,14 @@ trait Convert{
         }
         return json($result,$state);
     }
+
+    public function success($result,$msg='操作成功'){
+        return $this->json(0,$msg,$result);
+    }
+
+    public function error($msg,$code=-403.1,$other=[],$data=[]){
+        return $this->json($code,$msg,$data,$other);
+    }
     
     public function layJson($data,$map=null){
         $count=$data->count();
@@ -34,6 +42,16 @@ trait Convert{
         if($map!=null){
             $list=$list->map($map);
         }
-        return $this->json(0,'获取成功',$list,['count'=>$count]);
+        $maxPage=ceil($count/$limit);
+        return $this->json(0,'获取成功',$list,['count'=>$count,'limit'=>$limit,'page'=>$page,'maxPage'=>$maxPage]);
+    }
+
+    protected function jsFetch($vars=[],$code=200,$filter=null){
+        $controller=$this->request->controller(true);
+        $action=$this->request->action(true);
+        $tmp=app_path()."/view/{$controller}/{$action}.js";
+        return $this->fetch($tmp,$vars,$code,$filter)->header([
+            'Content-Type'=>'application/javascript; charset=utf-8'
+        ]);
     }
 }

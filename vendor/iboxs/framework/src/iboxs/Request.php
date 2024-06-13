@@ -867,7 +867,6 @@ class Request implements ArrayAccess
         if (is_array($name)) {
             return $this->only($name, $this->param, $filter);
         }
-
         return $this->input($this->param, $name, $default, $filter);
     }
 
@@ -1274,7 +1273,6 @@ class Request implements ArrayAccess
             }
 
             $data = $this->getData($data, $name);
-
             if (is_null($data)) {
                 return $default;
             }
@@ -1997,6 +1995,18 @@ class Request implements ArrayAccess
     public function withMiddleware(array $middleware)
     {
         $this->middleware = array_merge($this->middleware, $middleware);
+        return $this;
+    }
+
+    /**
+     * 设置在中间件传递的数据
+     * @access public
+     * @param  array $params 数据
+     * @return $this
+     */
+    public function withParams(array $params)
+    {
+        $this->param = array_merge($this->param, $params);
         return $this;
     }
 

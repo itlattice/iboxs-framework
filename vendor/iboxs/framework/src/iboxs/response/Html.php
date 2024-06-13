@@ -26,9 +26,10 @@ class Html extends Response
      */
     protected $contentType = 'text/html';
 
-    public function __construct(Cookie $cookie, $data = '', int $code = 200)
+    public function __construct(Cookie $cookie, $data = '', int $code = 200,bool $trace=true)
     {
         $this->init($data, $code);
         $this->cookie = $cookie;
+        $this->trace=$trace;
     }
 }

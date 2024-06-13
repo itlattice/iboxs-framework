@@ -1,0 +1,22 @@
+{
+    "name": "iboxs/iboxs-factory",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
+        }
+    ],
+    "require": {
+        "iboxs/iboxs-helper": "^1.0.0",
+        "iboxs/framework": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "iboxs\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
